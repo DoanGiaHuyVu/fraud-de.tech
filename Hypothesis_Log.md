@@ -163,3 +163,30 @@ True Positives (Correctly identified Fraud):    29
 ```
 
 **Decision:** **KEPT.** The LLM agent acts as a powerful complement to the Random Forest model. While the Random Forest provides a fast, mathematical probability score, the LLM agent provides deep reasoning and context synthesis that can act as a "second opinion" or an automated Level 1 triage filter before cases hit the human reviewer queue.
+
+---
+
+## Appendix: Complete Model Evaluation Metrics
+
+During the research phase (`analyze_clean.ipynb`), multiple algorithms were evaluated against the deterministic ground truth labels. 
+
+### Supervised Learning (Section 7 & 12)
+These models were trained on 80% of the labeled dataset and tested on 20% (200 transactions).
+
+| Model | Accuracy | Precision (Fraud) | Recall (Fraud) | F1-Score (Fraud) | PR-AUC | Notes |
+|---|---|---|---|---|---|---|
+| **Random Forest** | 0.99 | 0.93 | 0.93 | **0.93** | 0.995 | **Selected for production** (Best balance of precision/recall) |
+| **XGBoost (PySpark Driver)** | 0.96 | 0.65 | 0.93 | 0.76 | 0.904 | Excellent recall, but lower precision than RF |
+| **Decision Tree** | 0.94 | 0.58 | 0.79 | 0.67 | 0.731 | Prone to overfitting on the minority class |
+| **Logistic Regression** | 0.95 | 0.86 | 0.43 | 0.57 | 0.718 | Poor recall on non-linear fraud patterns |
+
+### Unsupervised / Pseudo-Labeling (Section 6, 8 & 11)
+These anomaly detection algorithms were run on the entire dataset without labels, and their output flags were evaluated against the perfect ground truth.
+
+| Algorithm | Fraud Flagged | Accuracy | Precision (Fraud) | Recall (Fraud) | F1-Score (Fraud) | Notes |
+|---|---|---|---|---|---|---|
+| **K-Means Clustering** | 11.3% | 0.93 | 0.75 | 0.33 | 0.46 | Best precision among unsupervised |
+| **Local Outlier Factor (LOF)** | 12.9% | 0.95 | 0.38 | 0.38 | 0.38 | Flagged too many legitimate outliers |
+| **Ensembled (Voting)** | 18.1% | 0.91 | 0.31 | 0.31 | 0.31 | Combined network + >= 2 stat flags |
+| **Isolation Forest** | 11.6% | 0.93 | 0.38 | 0.25 | 0.30 | High noise ratio |
+| **Network Analysis** | 3.6% | 0.94 | 0.00 | 0.00 | 0.00 | Too narrow as a standalone classifier |
