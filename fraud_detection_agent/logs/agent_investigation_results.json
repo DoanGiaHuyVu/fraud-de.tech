@@ -1,0 +1,53 @@
+[
+    {
+        "transaction_id": "tx_000089",
+        "card_id": "card_005",
+        "amount": 47.26,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 3.1485676215856095,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All boolean fraud signals are false, and the amount multiplier of 3.1x is well below the high-risk threshold. The transaction is a routine in-person grocery purchase within the cardholder's home country."
+        }
+    },
+    {
+        "transaction_id": "tx_001006",
+        "card_id": "card_030",
+        "amount": 345.74,
+        "signals": {
+            "cross_border_mismatch": true,
+            "amount_multiplier": 8.849244944970566,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.85,
+            "reasoning": "The transaction does not meet the defined fraud thresholds: only one boolean signal is True, and the amount multiplier (8.8x) is below the 10x threshold. While the cross-border mismatch is suspicious, the presence of a device ID and lack of micro-testing suggest it is not definitive fraud."
+        }
+    },
+    {
+        "transaction_id": "tx_001007",
+        "card_id": "card_040",
+        "amount": 579.49,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 25.30524017467249,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": true,
+            "confidence_score": 0.9,
+            "reasoning": "The Amount Multiplier is 25.3x, which significantly exceeds the 10x threshold defined as strong evidence of fraud. This represents a massive deviation from the cardholder's recent history of low-value transactions."
+        }
+    }
+]

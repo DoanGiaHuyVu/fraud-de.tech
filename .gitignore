@@ -11,7 +11,6 @@ wheels/
 
 # Project specific
 analyze.ipynb
-fraud_detection_agent/
 
 # Secrets
 .env

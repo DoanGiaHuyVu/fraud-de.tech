@@ -130,3 +130,20 @@ Through six manual discovery steps in Phase 1 of the notebook, we identified the
 **XGBoost:** `scale_pos_weight` tuned to the class imbalance ratio. Pulls PySpark splits back to the driver node for local training (as a pragmatic workaround for XGBoost's C++ dependency complexity on PySpark workers).
 
 **Result:** ✅ **Documented and working.** Not used in the final web app scoring — Pandas+sklearn is sufficient for 1,000 rows and avoids the overhead. Included to demonstrate production readiness.
+
+---
+
+## Section 13 — Autonomous LLM Agent Investigation (Gemma 4)
+
+**Purpose:** Test whether a Large Language Model can perform the duties of a Level 1 fraud analyst autonomously by analyzing the raw signals, history, and merchant context.
+
+**Approach:** 
+We built a background Python script (`run_investigation.py`) that feeds a JSON-formatted payload of the transaction, card history, and engineered signals into Google's Gemma 2.0 model via the GenAI API. The model is asked to act as an expert fraud analyst, reason through the signals step-by-step, and output a binary `is_fraud` decision along with a confidence score and a plain-English explanation.
+
+**Result:** ✅ **Highly Successful.**
+When evaluated against our deterministic ground truth (`labeled_transactions.csv`), the LLM agent achieved the following performance on 605 transactions:
+- **Accuracy:** 95.70%
+- **Recall:** 72.50% (Caught the vast majority of actual fraud)
+- **Precision:** 65.91%
+
+**Decision:** **KEPT.** The LLM agent acts as a powerful complement to the Random Forest model. While the Random Forest provides a fast, mathematical probability score, the LLM agent provides deep reasoning and context synthesis that can act as a "second opinion" or an automated Level 1 triage filter before cases hit the human reviewer queue.

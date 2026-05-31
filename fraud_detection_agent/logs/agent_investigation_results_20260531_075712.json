@@ -1,0 +1,172 @@
+[
+    {
+        "transaction_id": "tx_000089",
+        "card_id": "card_005",
+        "amount": 47.26,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 3.1485676215856095,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All boolean fraud signals are False, and the amount multiplier of 3.1x is not extreme for a grocery purchase. The transaction is in-person and occurs within the cardholder's home country."
+        }
+    },
+    {
+        "transaction_id": "tx_001006",
+        "card_id": "card_030",
+        "amount": 345.74,
+        "signals": {
+            "cross_border_mismatch": true,
+            "amount_multiplier": 8.849244944970566,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": true,
+            "confidence_score": 0.75,
+            "reasoning": "The transaction exhibits a cross-border mismatch (DE to CA) combined with a high amount multiplier (8.8x) relative to the cardholder's historical spending. This combination of factors is highly suspicious for an online retail transaction."
+        }
+    },
+    {
+        "transaction_id": "tx_001007",
+        "card_id": "card_040",
+        "amount": 579.49,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 25.30524017467249,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": true,
+            "confidence_score": 0.9,
+            "reasoning": "The Amount Multiplier is 25.3x, which exceeds the 10x threshold defined in Rule 4 as strong evidence of fraud. This represents a significant deviation from the cardholder's historical spending pattern of small, routine transactions."
+        }
+    },
+    {
+        "transaction_id": "tx_000647",
+        "card_id": "card_035",
+        "amount": 37.14,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 1.809059912323429,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All boolean fraud signals are False, and the transaction is an in-person purchase within the cardholder's home country. The amount multiplier is low (1.8x), and there is no evidence of micro-testing or fraud ring activity."
+        }
+    },
+    {
+        "transaction_id": "tx_000333",
+        "card_id": "card_018",
+        "amount": 16.17,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 0.7205882352941176,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All fraud signal detectors returned False, and the transaction amount is consistent with the cardholder's historical spending patterns. The merchant and location are consistent with the cardholder's home country."
+        }
+    },
+    {
+        "transaction_id": "tx_000744",
+        "card_id": "card_040",
+        "amount": 36.57,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 2.134228187919463,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All boolean fraud signals are false, and the amount multiplier (2.1x) is well below the threshold for suspicion. The transaction is consistent with the cardholder's history of gas station purchases in their home country."
+        }
+    },
+    {
+        "transaction_id": "tx_000960",
+        "card_id": "card_049",
+        "amount": 10.9,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 0.5362853628536285,
+            "micro_testing_detected": true,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.8,
+            "reasoning": "Only one boolean signal (Micro-Testing Detected) is True, which does not meet the threshold of two signals required by Rule 5. Additionally, the transaction amount is not large relative to the historical median (0.5x multiplier), meaning Rule 2 is not triggered."
+        }
+    },
+    {
+        "transaction_id": "tx_000659",
+        "card_id": "card_035",
+        "amount": 29.37,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 1.3939250118652113,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All boolean fraud signals are false, and the amount multiplier is low at 1.4x. The transaction is domestic and consistent with typical utility spending patterns."
+        }
+    },
+    {
+        "transaction_id": "tx_000700",
+        "card_id": "card_037",
+        "amount": 17.65,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 0.31796072779679335,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.95,
+            "reasoning": "All fraud signal detectors are negative, and the transaction is an in-person purchase within the cardholder's home country. The amount is consistent with historical spending patterns and does not trigger any investigation rules."
+        }
+    },
+    {
+        "transaction_id": "tx_000325",
+        "card_id": "card_017",
+        "amount": 11.04,
+        "signals": {
+            "cross_border_mismatch": true,
+            "amount_multiplier": 0.21526762211172856,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "is_fraud": false,
+            "confidence_score": 0.9,
+            "reasoning": "Only one boolean signal (Cross Border Mismatch) is True, which is common for online retail transactions. No other high-risk indicators like fraud rings, micro-testing, or extreme amount multipliers were detected."
+        }
+    }
+]

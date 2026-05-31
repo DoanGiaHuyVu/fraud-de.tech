@@ -36,13 +36,23 @@ The specific problems we are solving:
 
 ## 3. What We're Building
 
+**Part 1: The Reviewer Dashboard**
 A single-pane-of-glass fraud review dashboard that:
-
 - **Presents one case at a time** with all relevant context pre-loaded and pre-correlated: card spending history, entity relationship map, geographic IP mapping, merchant volume timeline, and an AI-generated narrative.
 - **Accepts keyboard-driven decisions** (A = Approve, D = Dismiss, E = Escalate, Z = Undo) so the analyst never has to touch the mouse.
 - **Explains every flag in plain English** (e.g., *"Amount is 36x this card's median; cardholder country CA does not match merchant country US"*).
 - **Learns from dismissals in-session** — when the reviewer dismisses a false positive, the merchant's risk score is suppressed for the rest of the session, preventing repeat noise.
 - **Writes a full audit trail** (`audit_log.json`) for every decision including timestamp, transaction ID, decision type, escalation reason, and analyst notes — for compliance and senior analyst handoff.
+
+**Part 2: Autonomous Agent Investigation Pipeline (`fraud_detection_agent/`)**
+An automated background worker that acts as a Level 1 analyst using Google's Gemma 2.0 LLM.
+- **Requirements:**
+  - Background Python script that batches and processes transactions autonomously.
+  - Automatically fetches the card's historical transactions to provide context.
+  - Formats signals (time of day, velocity, cross-border) into an LLM-digestible prompt.
+  - Uses Google GenAI (Gemma 2.0) to make a binary `is_fraud` decision.
+  - Streams results incrementally to a JSON file.
+  - Evaluated against ground truth to measure Precision, Recall, and Accuracy.
 
 ---
 
@@ -57,7 +67,7 @@ A single-pane-of-glass fraud review dashboard that:
 
 ## 5. What We Are Explicitly NOT Building
 
-- **An auto-decline engine.** Every decision requires a human in the loop. The system flags and explains; the analyst decides.
+- **An auto-decline engine without oversight.** While the LLM agent can flag cases, critical decisions (escalations/declines) still require a human in the loop for final confirmation on high-risk cases.
 - **A customer-facing application.** This is an internal enterprise tool. UX is optimized for expert analysts, not casual users.
 - **A persistent database backend.** For a 1,000-row dataset, in-memory Pandas gives sub-millisecond query times with zero infrastructure overhead. We are optimizing for demo speed, not production scale.
 - **Real-time transaction ingestion.** The tool operates on a pre-loaded CSV snapshot. A streaming Kafka pipeline is documented as a future extension in the README.

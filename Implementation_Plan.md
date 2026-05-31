@@ -26,15 +26,22 @@ transactions.csv
  main.py (FastAPI)              static/
  • Loads app_data.csv           • index.html
    into memory on boot          • style.css
- • REST endpoints:              • app.js
-   /api/transactions              ├── Review queue
-   /api/card_history              ├── Chart.js (card history, merchant volume)
-   /api/fraud_ring                ├── Vis.js (entity relationship map)
-   /api/fraud_ring_map            └── Leaflet.js (geographic IP map)
-   /api/merchant_volume
-   /api/risk_factors
-   /api/analyze_tx (AI)
-   /api/decision (audit)
+ • Serves REST API              • app.js
+      │                               ▲
+      └─────────( HTTP GET )──────────┘
+```
+
+### Separate Experimental Pipeline: Autonomous LLM Agent
+*Note: This is an ongoing experiment running in parallel to process the dataset via a Large Language Model.*
+```
+transactions.csv
+   │
+   └─> fraud_detection_agent/run_investigation.py
+           │
+           ├─> Fetches history & generates signals
+           ├─> Queries Google GenAI (Gemma 2.0)
+           │
+           └─> Streams to: logs/agent_investigation_results_partial.json
 ```
 
 ---

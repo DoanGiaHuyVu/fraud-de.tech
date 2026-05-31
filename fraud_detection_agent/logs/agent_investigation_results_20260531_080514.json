@@ -1,0 +1,92 @@
+[
+    {
+        "transaction_id": "tx_000089",
+        "card_id": "card_005",
+        "amount": 47.26,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 3.1485676215856095,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "transaction_id": "tx_000089",
+            "is_fraud": false,
+            "confidence_score": 0.99,
+            "reasoning": "The transaction is for a standard grocery amount with no signal detectors triggered and a low amount multiplier."
+        }
+    },
+    {
+        "transaction_id": "tx_001006",
+        "card_id": "card_030",
+        "amount": 345.74,
+        "signals": {
+            "cross_border_mismatch": true,
+            "amount_multiplier": 8.849244944970566,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "transaction_id": "tx_001006",
+            "is_fraud": false,
+            "confidence_score": 0.85,
+            "reasoning": "While there is a cross-border mismatch, recent history shows in-person transactions at McDonald's and Whole Foods in the merchant's country, suggesting the cardholder is traveling."
+        }
+    },
+    {
+        "transaction_id": "tx_001007",
+        "card_id": "card_040",
+        "amount": 579.49,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 25.30524017467249,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "transaction_id": "tx_001007",
+            "is_fraud": true,
+            "confidence_score": 0.95,
+            "reasoning": "The amount multiplier is 25.3x, which exceeds the 10x threshold defined in the investigation rules as strong evidence of fraud."
+        }
+    },
+    {
+        "transaction_id": "tx_000647",
+        "card_id": "card_035",
+        "amount": 37.14,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 1.809059912323429,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "transaction_id": "tx_000647",
+            "is_fraud": false,
+            "confidence_score": 0.99,
+            "reasoning": "This is a low-value restaurant transaction with no red flags and a multiplier consistent with previous spending."
+        }
+    },
+    {
+        "transaction_id": "tx_000333",
+        "card_id": "card_018",
+        "amount": 16.17,
+        "signals": {
+            "cross_border_mismatch": false,
+            "amount_multiplier": 0.7205882352941176,
+            "micro_testing_detected": false,
+            "missing_device_id": false,
+            "fraud_ring_detected": false
+        },
+        "agent_decision": {
+            "transaction_id": "tx_000333",
+            "is_fraud": false,
+            "confidence_score": 0.99,
+            "reasoning": "The transaction is for a small amount at a common merchant with no signal detectors triggered."
+        }
+    }
+]

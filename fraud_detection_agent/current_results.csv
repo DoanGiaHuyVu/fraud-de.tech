@@ -1,0 +1,606 @@
+transaction_id,card_id,amount,is_fraud,confidence_score,explanation
+tx_000784,card_042,18.38,False,0.9,"Only a cross-border mismatch was detected. Per investigation rules, this alone is not sufficient for a fraud flag, especially for a common online retailer like Amazon."
+tx_000081,card_004,160.55,False,0.98,No fraud signals were detected for this in-person transaction.
+tx_000389,card_020,57.12,False,0.98,No fraud signals were detected for this in-person transaction.
+tx_000779,card_041,15.86,False,0.98,No fraud signals were detected for this online utility payment.
+tx_000256,card_013,52.73,False,0.98,No fraud signals were detected for this online retail transaction.
+tx_000041,card_002,57.27,False,0.98,No fraud signals detected. This is a standard in-person transaction within the cardholder's home country.
+tx_000649,card_035,15.99,False,0.85,"While there is a cross-border mismatch, it is for a well-known US-based subscription service (Disney+), which is common for Canadian users. No other suspicious signals are present."
+tx_000063,card_003,48.14,False,0.98,No fraud signals detected. This is a standard in-person grocery transaction within the cardholder's home country.
+tx_000544,card_029,9.06,False,0.98,No fraud signals detected. This is a standard online utility payment within the cardholder's home country.
+tx_000551,card_029,58.77,False,0.8,"The amount multiplier is 6.5x, which is elevated but does not meet the >10x threshold for strong fraud evidence. No other boolean signals are triggered."
+tx_000782,card_042,9.66,False,0.95,No fraud signals were triggered. The transaction is in-person and occurs within the cardholder's home country.
+tx_000206,card_011,4.85,False,0.99,"No fraud signals detected. This is a low-value, in-person transaction within the cardholder's country."
+tx_000521,card_028,51.13,False,0.85,"Only one signal (Cross Border Mismatch) is present. Per investigation rules, this alone is not sufficient to flag fraud for an online retail transaction."
+tx_000690,card_037,41.39,False,0.99,No fraud signals detected. This is a standard in-person grocery transaction within the cardholder's country.
+tx_000853,card_045,42.68,False,0.85,"Only one signal (Cross Border Mismatch) is present. Without additional signals like a missing device ID, it does not meet the threshold for fraud."
+tx_000396,card_021,94.87,False,0.99,"The transaction is domestic, performed in person, and triggered no fraud signal detectors."
+tx_000442,card_023,28.79,False,0.99,"The transaction is domestic, performed in person, and triggered no fraud signal detectors."
+tx_000897,card_048,9.57,False,0.99,"The transaction is domestic, performed in person, and triggered no fraud signal detectors."
+tx_000018,card_000,51.5,False,0.99,The transaction is domestic and triggered no fraud signal detectors.
+tx_000394,card_021,19.32,False,0.85,"While there is a cross-border mismatch, it is a common occurrence for online retail (Etsy). Only one boolean signal is true, and there is no missing device ID or high amount multiplier to indicate fraud."
+tx_000027,card_001,69.73,False,0.8,"Only one signal (Cross Border Mismatch) is present. According to Rule 3, this alone is not sufficient to flag as fraud without accompanying factors like a missing device ID."
+tx_000702,card_037,16.88,False,0.95,"No fraud signals detected. The transaction is domestic, in-person, and consistent with the cardholder's recent history."
+tx_000873,card_047,37.03,False,0.95,No fraud signals detected. This is a standard domestic online transaction for a utility provider.
+tx_000608,card_033,92.02,False,0.95,No fraud signals detected. This is a domestic in-person grocery transaction with no suspicious indicators.
+tx_000226,card_012,27.35,False,0.95,No fraud signals detected. This is a domestic in-person grocery transaction with no suspicious indicators.
+tx_000391,card_021,135.46,False,0.95,No fraud signals were triggered. The amount multiplier is low (2.4x) and the transaction is domestic.
+tx_000914,card_049,41.79,False,0.98,All signal detectors are negative and the transaction is domestic. No suspicious patterns detected.
+tx_000735,card_039,8.6,False,0.98,No fraud signals detected. The transaction is domestic and the amount is within a normal range for the category.
+tx_000604,card_032,28.46,False,0.98,No fraud signals detected. The transaction is domestic and follows normal spending patterns.
+tx_000456,card_024,54.46,False,0.98,No fraud signals detected. The transaction is domestic and within normal parameters for a grocery purchase.
+tx_000783,card_042,29.24,False,0.95,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and the amount is reasonable."
+tx_000533,card_028,102.56,False,0.95,No fraud signals detected. The transaction is a standard in-person grocery purchase within the cardholder's country.
+tx_000250,card_013,18.19,False,0.95,No fraud signals detected. The transaction is for a utility provider within the cardholder's country with a low amount multiplier.
+tx_000231,card_012,8.84,False,0.85,"Only one boolean signal (Cross Border Mismatch) is True. Per Rule 5, at least two signals are required to flag as fraud."
+tx_000151,card_008,31.89,False,0.8,"Only one boolean signal (Cross Border Mismatch) is True. Despite the lack of card history, it does not meet the threshold for fraud defined in the rules."
+tx_000615,card_033,62.5,False,0.98,All signal detectors are negative. The transaction is in-person with matching cardholder and merchant countries.
+tx_000274,card_014,39.84,False,0.98,No suspicious signals detected. The transaction is in-person with matching countries and no red flags in the signal detectors.
+tx_000441,card_023,46.32,False,0.98,No boolean signals are triggered. The amount multiplier is low (1.6x) and the transaction is in-person with matching countries.
+tx_000896,card_048,16.42,False,0.98,No suspicious signals detected. The transaction is in-person with matching countries and a low amount multiplier.
+tx_000317,card_017,9.3,False,0.98,All signal detectors are negative. The transaction is in-person with matching countries and a low transaction amount.
+tx_000540,card_029,21.4,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present, which is common for Amazon purchases. No other suspicious indicators or missing device IDs were detected."
+tx_000156,card_008,84.46,False,0.95,No fraud signals detected. The transaction is an in-person purchase within the cardholder's home country with a reasonable amount multiplier.
+tx_000400,card_021,47.99,False,0.95,No fraud signals detected. The transaction is a standard grocery purchase in the home country and aligns with the cardholder's spending history.
+tx_000114,card_006,85.7,False,0.9,"No fraud signals detected. Although there is no previous history for this card, the transaction is a routine in-person gas station purchase in the home country."
+tx_000316,card_017,22.57,False,0.95,No fraud signals detected. The transaction is a small in-person purchase consistent with the cardholder's recent history at other cafes.
+tx_000743,card_040,91.1,False,0.95,"No fraud signals detected. The transaction is a domestic, in-person purchase at a common restaurant."
+tx_000849,card_045,20.83,False,0.7,"While there is a cross-border mismatch, it is the only signal present. Per investigation rules, this alone is not sufficient to flag as fraud."
+tx_000680,card_036,20.0,False,0.9,"The only signal is a missing device ID, which is normal and expected for an ATM channel transaction."
+tx_000770,card_041,374.46,True,0.95,"The amount multiplier is 23.6x, which exceeds the 10x threshold defined in the investigation rules as strong evidence of fraud."
+tx_000406,card_021,35.82,False,0.95,"No fraud signals detected. The transaction is a domestic, in-person grocery purchase consistent with the cardholder's recent history."
+tx_000848,card_045,60.0,False,0.95,"Only one signal (Missing Device ID) is present, which is standard for ATM transactions. No other suspicious indicators were detected."
+tx_000319,card_017,80.0,False,0.9,"Missing Device ID is expected for the ATM channel. While the amount multiplier is 5x, it does not reach the high-risk threshold of 10x."
+tx_000747,card_040,29.49,False,0.99,"No fraud signals were triggered, and the transaction is consistent with the cardholder's country."
+tx_000390,card_020,52.46,False,0.85,"A cross-border mismatch is present, but this is common for online retail purchases (Amazon.ca). No other supporting fraud signals were found."
+tx_000401,card_021,57.93,False,0.99,No fraud signals detected. The transaction is consistent with the cardholder's location and recent spending history.
+tx_000552,card_029,3.9,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present. The cardholder has a history of previous transactions with Amazon.com, suggesting this is normal behavior."
+tx_000806,card_043,16.27,False,0.95,"No fraud signals were detected, and the transaction is domestic with a low amount."
+tx_000904,card_049,22.19,False,0.95,"No fraud signals were detected, and the transaction is domestic."
+tx_000901,card_048,40.0,False,0.9,"Only one boolean signal (Missing Device ID) is present, which is expected and normal for the ATM channel."
+tx_000454,card_024,80.0,False,0.9,"Only one boolean signal (Missing Device ID) is present, which is expected and normal for the ATM channel."
+tx_000375,card_020,30.11,False,0.98,"No fraud signals were triggered. The transaction is in-person, matches the cardholder's country, and the amount is consistent with typical restaurant spending."
+tx_000587,card_031,8.58,False,0.98,"No fraud signals were triggered. This is a low-value, in-person grocery transaction within the cardholder's home country."
+tx_000543,card_029,42.13,False,0.92,"No boolean fraud signals were triggered. While the amount multiplier is 2.8x, it is well below the 10x threshold for high-risk flags."
+tx_000280,card_015,32.18,False,0.98,No fraud signals were triggered. The transaction is for a utility provider in the cardholder's home country with no suspicious indicators.
+tx_000800,card_042,11.08,False,0.98,No fraud signals were triggered. The transaction is a low-value online purchase within the cardholder's home country.
+tx_000705,card_038,11.71,False,0.95,The transaction is in-person within the cardholder's home country and triggers no fraud signals.
+tx_000286,card_015,58.15,False,0.95,The transaction is in-person within the cardholder's home country with a low amount multiplier and no other red flags.
+tx_000413,card_022,15.99,False,0.85,"While there is a cross-border mismatch, this is typical for a global subscription service like Spotify, which is headquartered in Sweden."
+tx_000765,card_041,15.99,False,0.85,The cross-border mismatch is expected for Spotify. No other fraud signals are present for this specific transaction.
+tx_000268,card_014,10.15,False,0.95,The transaction is in-person within the cardholder's home country and triggers no fraud signals.
+tx_000745,card_040,42.54,False,0.95,"The transaction is local, in-person, and the amount is consistent with the cardholder's recent spending history at other food and entertainment venues."
+tx_000870,card_047,50.57,False,0.8,"While there is a cross-border mismatch, it is a common occurrence for online retail (AliExpress). No other suspicious signals or missing device IDs were detected."
+tx_000221,card_011,83.08,True,0.9,"The amount multiplier is 17.1x, which exceeds the 10x threshold defined in the investigation rules as strong evidence of fraud."
+tx_000102,card_005,13.47,False,0.9,"No fraud signals were triggered. Although there is no previous history, the transaction is a small, local payment to a known utility provider."
+tx_000235,card_012,18.72,False,0.95,All signal detectors are negative and the transaction amount is consistent with the cardholder's recent online and retail spending patterns.
+tx_000717,card_038,17.43,False,0.95,"The transaction is local, in-person, and shows no suspicious signal detectors or unusual amount multipliers."
+tx_000124,card_007,49.23,False,0.8,"While there is a cross-border mismatch, it is the only signal triggered. Per investigation rules, a single mismatch without other factors is not sufficient to flag as fraud."
+tx_000091,card_005,23.91,False,0.85,Only one boolean signal (cross-border mismatch) is present. The amount multiplier is low and no other fraud indicators are detected.
+tx_000909,card_049,9.99,False,0.9,The cross-border mismatch is expected for a subscription service like Spotify (based in Sweden). No other suspicious signals are present.
+tx_000764,card_041,85.73,False,0.9,"No boolean signals are triggered, and the amount multiplier (5.4x) is well below the 10x threshold for automatic fraud flagging."
+tx_000111,card_006,22.43,False,0.85,"Only one signal (Cross Border Mismatch) is present, which is common for online retail like Etsy. No other suspicious indicators or high multipliers were detected."
+tx_000577,card_031,25.75,False,0.95,No fraud signals were triggered. The transaction is domestic and the amount multiplier is well within normal limits.
+tx_000023,card_001,100.0,False,0.9,"While Missing Device ID is True, this is expected for an ATM channel transaction. No other risk signals are present."
+tx_000412,card_022,15.99,False,0.95,Cross Border Mismatch is standard for US-based subscription services like Netflix. No other suspicious signals were detected.
+tx_000377,card_020,40.0,False,0.9,Missing Device ID is normal for an ATM transaction. No other risk signals or anomalies were detected in the card history.
+tx_000813,card_043,27.3,False,0.95,No suspicious signals detected. The transaction is domestic and the amount multiplier is within a normal range.
+tx_000788,card_042,10.98,False,0.95,No suspicious signals detected. The transaction is domestic and consistent with the cardholder's country.
+tx_000883,card_047,7.67,False,0.95,No suspicious signals detected. The transaction is domestic and the amount is low and consistent with grocery spending.
+tx_000635,card_034,18.63,False,0.85,Only one boolean signal (Cross Border Mismatch) is True. This is common for global online retailers like AliExpress and does not meet the threshold for fraud.
+tx_000750,card_040,9.99,False,0.85,Only one boolean signal (Cross Border Mismatch) is True. This is typical for US-based subscription services like Netflix used by international customers.
+tx_000110,card_006,42.9,False,0.95,"No suspicious signals detected. The transaction is in-person, within the cardholder's country, and consistent with recent spending."
+tx_000664,card_036,69.81,False,0.9,"While the amount multiplier is 3.5x, it is well below the 10x threshold for fraud. No other boolean signals are triggered."
+tx_000466,card_025,30.09,False,0.95,No suspicious signals detected. This is a standard utility payment within the cardholder's home country.
+tx_000075,card_004,20.0,False,0.9,Missing Device ID is normal for ATM channel transactions. No other fraud indicators are present.
+tx_000352,card_019,15.99,False,0.85,"Cross border mismatch is expected for Spotify as it is a Swedish company. Only one boolean signal is true, which does not meet the fraud threshold."
+tx_000355,card_019,19.99,False,0.95,Cross border mismatch is expected for Spotify (Sweden) and is consistent with the card's previous transaction history.
+tx_000132,card_007,37.6,False,0.98,No fraud signals detected. The transaction is domestic and the amount is within a normal range.
+tx_000101,card_005,6.11,False,0.99,No fraud signals detected. This is a low-value domestic grocery transaction.
+tx_000487,card_026,36.55,False,0.95,"No fraud signals detected. While there is no previous history, the transaction is domestic and for a standard amount."
+tx_000259,card_013,201.67,False,0.85,Cross border mismatch is common for AliExpress. The amount multiplier is elevated (5.7x) but does not meet the >10x threshold for strong fraud evidence.
+tx_000385,card_020,5.57,False,0.95,No fraud signals were detected. The transaction is in-person and matches the cardholder's country.
+tx_000916,card_049,60.0,False,0.9,"Only one boolean signal (Missing Device ID) is true, which is normal for an ATM channel transaction. No other fraud rules were triggered."
+tx_000448,card_024,37.51,False,0.95,No fraud signals were detected. The transaction is consistent with the cardholder's country and recent grocery spending history.
+tx_000395,card_021,66.91,False,0.85,"While there is a Cross Border Mismatch, it is a single signal for an online retail purchase, which is common and does not meet the threshold for fraud."
+tx_000141,card_007,24.16,False,0.95,No fraud signals were detected. The transaction is in-person and matches the cardholder's country.
+tx_000621,card_033,11.94,False,0.98,No fraud signals were detected. The transaction is a low-value grocery purchase within the cardholder's home country.
+tx_000056,card_003,60.0,False,0.9,"Only one boolean signal (Missing Device ID) is true, which is normal for an ATM channel transaction. No other suspicious activity is present."
+tx_000198,card_010,12.19,False,0.98,No fraud signals were detected. This is a standard low-value gas station transaction in the cardholder's home country.
+tx_000057,card_003,15.99,False,0.85,"While a cross-border mismatch is present, it is common for online subscriptions to US-based companies like Disney+. No other risk signals were triggered."
+tx_000499,card_027,132.32,False,0.98,No fraud signals were detected. The transaction is an in-person purchase within the cardholder's home country.
+tx_000292,card_015,76.91,False,0.95,"No fraud signals were triggered. The transaction is in-person, within the cardholder's country, and the amount multiplier is low."
+tx_000061,card_003,74.47,False,0.95,No fraud signals were triggered. The transaction amount is consistent with the user's recent spending history.
+tx_000570,card_030,11.54,False,0.9,No fraud signals were triggered. This is a low-value in-person transaction with no cross-border mismatch.
+tx_000348,card_019,124.45,False,0.8,"Although the amount multiplier is elevated (6.9x), it does not exceed the 10x threshold, and no other boolean fraud signals are present."
+tx_000289,card_015,30.31,False,0.95,No fraud signals were triggered. The transaction is consistent with the cardholder's location and previous gas station activity.
+tx_000711,card_038,21.29,False,0.98,No suspicious boolean signals detected. The amount is consistent with the cardholder's recent history at similar merchants.
+tx_000372,card_020,9.99,False,0.98,No suspicious boolean signals detected. The transaction is a standard subscription amount within the cardholder's home country.
+tx_000497,card_027,40.0,False,0.95,"While 'Missing Device ID' is True, this is normal for the ATM channel. No other fraud signals are present."
+tx_000580,card_031,67.56,False,0.92,No boolean signals are True and the amount multiplier (3.9x) is well below the 10x threshold for high-risk transactions.
+tx_000651,card_035,71.19,False,0.88,"Only one boolean signal (Cross Border Mismatch) is True, which is expected for a transaction with AliExpress. The amount multiplier is not extreme."
+tx_000731,card_039,38.44,False,0.85,"Only one boolean signal (Cross Border Mismatch) is True. Recent history shows the card was used at Joe Beef in Canada, suggesting the cardholder is traveling, which explains the mismatch."
+tx_000186,card_010,25.36,False,0.98,"No fraud signals were detected. The transaction is domestic, in-person, and consistent with the cardholder's history."
+tx_000142,card_007,54.22,False,0.9,"Only one boolean signal (Cross Border Mismatch) is True. Extensive recent history in Canada (Bell Canada, Petro-Canada, Metro) indicates the cardholder is traveling or residing in Canada."
+tx_000609,card_033,69.77,False,0.9,"No boolean signals are True. While the card was recently used in Canada, the current transaction is in the cardholder's home country (GB), which is consistent with returning from travel."
+tx_000329,card_018,20.0,False,0.95,"Only one boolean signal (Missing Device ID) is True. However, the transaction channel is an ATM, where a device ID is not applicable, making this normal behavior."
+tx_000210,card_011,4.13,False,0.98,No fraud signals were triggered. The transaction amount is low and consistent with the cardholder's history.
+tx_000006,card_000,82.96,False,0.98,No fraud signals were triggered. The amount multiplier is low (1.6x) and the transaction is domestic.
+tx_000799,card_042,33.17,False,0.95,No fraud signals were triggered. The amount multiplier (3.0x) is well below the high-risk threshold of 10x.
+tx_000416,card_022,86.33,False,0.9,"Although the amount multiplier is 5.4x, it does not meet the 10x threshold for automatic fraud detection, and no other risk signals are present."
+tx_000573,card_031,33.81,False,0.98,No fraud signals were triggered. The transaction is domestic and the amount is consistent with typical grocery spending.
+tx_000538,card_029,80.0,False,0.95,"Only one boolean signal is True (Missing Device ID), which is normal for the ATM channel. The amount multiplier is moderate and does not trigger fraud rules."
+tx_000321,card_017,200.0,False,0.85,The amount multiplier is high (8.9x) but remains below the 10x threshold. Missing Device ID is expected for ATM transactions.
+tx_000066,card_003,53.66,False,0.99,"No fraud signals were detected, and the amount multiplier is 1.0x, indicating a standard transaction."
+tx_000520,card_028,200.0,False,0.95,"Only one boolean signal is True (Missing Device ID), which is standard for ATM transactions. No other suspicious indicators are present."
+tx_000068,card_003,13.99,False,0.9,"Cross Border Mismatch is present, but this is typical for a US-based subscription service like Netflix for a Canadian cardholder."
+tx_000127,card_007,45.67,False,0.98,No fraud signals were triggered. The transaction amount is consistent with the cardholder's recent spending history.
+tx_000325,card_017,11.04,False,0.85,"While a cross-border mismatch was detected, it is common for online retail (eBay). No other suspicious signals or missing device IDs were present."
+tx_000695,card_037,36.67,False,0.99,No fraud signals detected. The transaction is at a merchant (IGA) previously visited by the cardholder.
+tx_000418,card_022,21.41,False,0.98,No fraud signals were triggered. The transaction is a standard in-person purchase within the cardholder's home country.
+tx_000476,card_025,26.02,False,0.85,"A cross-border mismatch was detected, but this is typical for online retail (Etsy). No other boolean signals were triggered to indicate fraud."
+tx_000103,card_005,20.01,False,0.98,No fraud signals detected. The transaction is consistent with the cardholder's history of payments to the same merchant.
+tx_000490,card_026,22.06,False,0.98,No fraud signals detected. This is a standard in-person transaction within the cardholder's home country.
+tx_000879,card_047,21.98,False,0.98,No fraud signals detected. The transaction is a typical in-person grocery purchase within the cardholder's home country.
+tx_000083,card_004,19.99,False,0.85,"While a cross-border mismatch is present, Spotify is a Swedish company, making this a normal pattern for this merchant. No other suspicious signals were detected."
+tx_000172,card_009,8.41,False,0.95,"No fraud signals detected. Although there is no previous history, the transaction is a low-value, in-person purchase in the cardholder's home country."
+tx_000689,card_037,27.13,False,0.95,No fraud signals were triggered. The transaction amount and merchant category are consistent with the cardholder's recent history.
+tx_000900,card_048,16.86,False,0.95,No fraud signals were triggered. The transaction is in-person within the cardholder's home country and aligns with previous spending patterns.
+tx_000140,card_007,52.34,False,0.8,"While there is a cross-border mismatch, the cardholder's recent history shows multiple transactions in Canada (Metro, Videotron, Provigo), suggesting legitimate travel."
+tx_000397,card_021,39.25,False,0.95,No fraud signals were triggered. The transaction is a standard in-person purchase consistent with the user's location and history.
+tx_000536,card_028,25.26,False,0.85,"A cross-border mismatch is present, but this is common for online retail (Etsy) and is consistent with the user's previous online shopping at eBay."
+tx_000496,card_026,73.92,False,0.95,No fraud signals detected. The amount multiplier is low and the transaction is consistent with the cardholder's history at the same merchant.
+tx_000612,card_033,15.66,False,0.95,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and the amount is low."
+tx_000565,card_030,52.12,False,0.9,"No fraud signals detected. Although the amount multiplier is 4.5x, it is well below the 10x threshold for high-risk flags."
+tx_000143,card_007,43.21,False,0.9,"A cross border mismatch is present, but recent card history shows a consistent pattern of payments to other Canadian utility and retail providers."
+tx_000859,card_046,11.99,False,0.85,"A cross border mismatch is present, but this is typical for global subscription services like Disney+ and no other suspicious signals were detected."
+tx_000310,card_016,25.62,False,0.95,No suspicious signals detected. The transaction is a standard in-person grocery purchase within the cardholder's home country.
+tx_000862,card_046,100.0,False,0.8,"Only one boolean signal is true (Missing Device ID), which is expected for the ATM channel. The amount is a standard withdrawal value."
+tx_000260,card_013,76.05,False,0.85,"While there is a cross-border mismatch, the cardholder has a documented history of online shopping with international merchants like AliExpress."
+tx_000422,card_022,68.47,False,0.95,No suspicious signals detected. The transaction is consistent with the cardholder's recent history of in-person spending at the same merchant.
+tx_000878,card_047,12.98,False,0.85,"A cross-border mismatch is present, but the transaction amount is low and aligns with the user's previous online retail behavior."
+tx_000513,card_027,26.97,False,0.98,"No fraud signals detected. The transaction is a low-value, in-person purchase within the cardholder's home country."
+tx_000855,card_046,19.99,False,0.9,"While there is a cross-border mismatch, this is typical for a US-based subscription service like Disney+. No other suspicious signals were triggered."
+tx_000161,card_008,86.69,False,0.95,No fraud signals detected. The transaction is a standard in-person gas station purchase within the cardholder's country.
+tx_000135,card_007,46.88,False,0.9,No fraud signals detected. The transaction is consistent with the cardholder's country and typical grocery spending patterns.
+tx_000188,card_010,200.0,True,0.95,"The amount multiplier is extremely high (10.7x) compared to recent history, and the device ID is missing, which strongly indicates fraudulent activity."
+tx_000865,card_046,11.99,False,0.95,"Only one signal (Cross Border Mismatch) is present, which is common for US-based subscription services like Disney+ for Canadian users."
+tx_000753,card_040,22.28,False,0.99,"No fraud signals were detected, and the transaction is a standard in-person purchase within the cardholder's home country."
+tx_000374,card_020,13.53,False,0.9,Only one signal (Cross Border Mismatch) is present. The transaction amount is low and does not trigger any other fraud rules.
+tx_000563,card_030,44.63,False,0.95,"No fraud signals detected. Recent history suggests the cardholder is traveling between Canada and Germany, making the current transaction normal."
+tx_000685,card_037,93.03,False,0.98,"No fraud signals were detected, and the amount multiplier is well below the threshold for suspicious activity."
+tx_000709,card_038,15.88,False,0.98,No suspicious signals detected. The transaction amount and location are consistent with the cardholder's recent history in Canada.
+tx_000062,card_003,26.48,False,0.98,No suspicious signals detected. The online transaction is consistent with the cardholder's established pattern of online retail and subscription spending.
+tx_000814,card_043,18.73,False,0.98,No suspicious signals detected. The transaction is for a utility provider within the cardholder's home country with no red flags.
+tx_000693,card_037,109.99,False,0.9,"Although the amount multiplier is 3.0x, it does not reach the extreme threshold (>10x) defined in the rules, and no other fraud signals are present."
+tx_000038,card_002,24.11,False,0.98,No suspicious signals detected. This is a standard in-person grocery purchase consistent with the cardholder's country.
+tx_000294,card_015,19.15,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present, which is typical for AliExpress. No other fraud indicators or missing device IDs were detected."
+tx_000052,card_002,15.66,False,0.98,"No fraud signals detected. The transaction is local, in-person, and consistent with the cardholder's spending patterns."
+tx_000284,card_015,58.27,False,0.95,No fraud signals detected. The transaction is a local utility payment with a reasonable amount multiplier.
+tx_000727,card_039,9.39,False,0.85,"While there is a cross-border mismatch, the card's recent history shows consistent usage within Canada, suggesting the cardholder is currently located there."
+tx_000554,card_029,19.99,False,0.9,Cross border mismatch is expected for a US-based subscription service like Disney+. No other suspicious signals or missing device IDs are present.
+tx_000877,card_047,43.8,False,0.95,"No fraud signals detected. The transaction is a low-amount, in-person grocery purchase within the cardholder's home country."
+tx_000388,card_020,42.29,False,0.9,"Only one signal (Cross Border Mismatch) is present, which is common for global retailers like AliExpress. No other suspicious indicators are present."
+tx_000656,card_035,21.07,False,0.9,"Only one signal (Cross Border Mismatch) is present, which is typical for global marketplaces like Etsy. No other suspicious indicators are present."
+tx_000073,card_003,43.21,False,0.95,No fraud signals detected. The transaction amount and merchant category are consistent with the cardholder's recent online shopping history.
+tx_000895,card_048,80.0,False,0.9,Missing Device ID is normal for ATM transactions. The amount is reasonable given the cardholder's history of ATM withdrawals in the same country.
+tx_000047,card_002,19.99,False,0.95,"Only one signal (Cross Border Mismatch) is present, which is typical for US-based subscription services like Netflix used by Canadian cardholders."
+tx_000460,card_024,40.16,False,0.99,"No fraud signals detected. The transaction is domestic, in-person, and consistent with the user's grocery spending history."
+tx_000742,card_040,9.99,False,0.98,"While a Cross Border Mismatch exists, the transaction amount and merchant match a previous legitimate payment in the card's history."
+tx_000795,card_042,17.35,False,0.99,"No fraud signals detected. The transaction is domestic, in-person, and the amount is within a normal range for the merchant category."
+tx_000692,card_037,34.9,False,0.99,"No fraud signals detected. The transaction is domestic, in-person, and aligns with typical spending patterns."
+tx_000678,card_036,49.9,False,0.95,No fraud signals were detected. The transaction amount and merchant category are consistent with the cardholder's recent spending history.
+tx_000185,card_010,27.9,False,0.95,No fraud signals were detected. The transaction is within normal spending patterns and occurs in the cardholder's home country.
+tx_000504,card_027,14.91,False,0.95,"No fraud signals were detected. While the amount multiplier is low, there are no other indicators of suspicious activity."
+tx_000887,card_048,14.96,False,0.85,"Only one boolean signal (Cross Border Mismatch) is present. Given the merchant is Amazon, this is common behavior and does not meet the threshold for fraud without additional signals."
+tx_000501,card_027,38.93,False,0.95,No fraud signals were detected. The transaction is consistent with the cardholder's location and previous spending habits.
+tx_000446,card_024,61.85,False,0.98,All fraud signal detectors are false and the transaction is consistent with the cardholder's country and recent spending history.
+tx_000657,card_035,41.4,False,0.98,No fraud signals were triggered. The amount multiplier is low and the transaction occurs within the cardholder's home country.
+tx_000200,card_010,31.84,False,0.98,No fraud signals detected. The transaction is domestic and aligns with the cardholder's recent activity in the US.
+tx_000515,card_027,7.24,False,0.98,No fraud signals were triggered. The transaction amount is low and consistent with the cardholder's location and history.
+tx_000872,card_047,13.11,False,0.98,All fraud signal detectors are false. The online transaction is domestic and the amount is within a normal range.
+tx_000410,card_021,37.43,False,0.95,No fraud signals detected. The transaction is in-person within the cardholder's home country with a normal amount multiplier.
+tx_000219,card_011,15.99,False,0.85,"While a cross-border mismatch is present, it is for a US-based subscription service (Disney+), which is common. No other fraud signals were triggered."
+tx_000084,card_004,33.15,False,0.95,No fraud signals detected. The transaction is in-person within the cardholder's home country and aligns with typical spending patterns.
+tx_000287,card_015,10.04,False,0.95,No fraud signals detected. The transaction is in-person within the cardholder's home country with a low amount multiplier.
+tx_000694,card_037,62.35,False,0.95,No fraud signals detected. The transaction is in-person within the cardholder's home country and the amount is within a normal range.
+tx_000145,card_008,19.72,False,0.98,"No fraud signals detected. The transaction is for a low amount at a gas station, which is consistent with the cardholder's previous history at Esso."
+tx_000224,card_012,20.39,False,0.98,No fraud signals detected. The transaction amount is normal and the merchant category aligns with the cardholder's previous online shopping behavior.
+tx_000640,card_034,15.17,False,0.98,No fraud signals detected. This is a standard in-person entertainment transaction with no suspicious indicators.
+tx_000307,card_016,31.21,False,0.98,No fraud signals detected. A utility payment is a routine transaction and no risk flags were triggered.
+tx_000643,card_034,19.99,False,0.9,"While a cross-border mismatch is present, it is typical for a US-based subscription service like Disney+. No other fraud signals or missing device IDs were detected."
+tx_000437,card_023,2.82,False,0.95,No fraud signals were detected. The transaction is in-person and occurs within the cardholder's home country.
+tx_000175,card_009,32.16,False,0.85,"Only one boolean signal (Cross Border Mismatch) is present, which is common for international online retail and does not meet the threshold for fraud."
+tx_000427,card_023,4.34,False,0.85,Only one boolean signal (Cross Border Mismatch) is present. The low transaction amount is consistent with typical online retail behavior.
+tx_000264,card_014,150.51,False,0.9,"No boolean fraud signals were detected, and the amount multiplier (6.0x) is below the high-risk threshold of 10x."
+tx_000028,card_001,289.54,False,0.9,"No boolean fraud signals were detected, and the transaction is domestic with an amount multiplier within normal limits."
+tx_000173,card_009,10.85,False,0.98,No fraud signals detected. The transaction amount is low and consistent with the cardholder's recent spending history.
+tx_000619,card_033,35.68,False,0.98,All signal detectors are negative. The transaction is a standard in-person purchase within the cardholder's home country.
+tx_000898,card_048,42.09,False,0.92,"No boolean fraud signals were triggered. While the amount multiplier is slightly elevated at 2.5x, it does not meet the threshold for fraud."
+tx_000642,card_034,13.76,False,0.85,"Only one signal (Cross Border Mismatch) is True. Per investigation rules, this alone is not sufficient for a fraud flag, especially since the Device ID is present."
+tx_000054,card_002,25.92,False,0.98,No fraud signals detected. The transaction is a routine in-person grocery purchase with no suspicious indicators.
+tx_000495,card_026,15.99,False,0.98,No fraud signals detected. The transaction is a low-value subscription within the cardholder's own country.
+tx_000350,card_019,9.99,False,0.9,"While a cross-border mismatch is present, it is expected for Spotify (a Swedish company). No other suspicious signals were triggered."
+tx_000283,card_015,104.78,False,0.9,The transaction is in-person and within the same country. The amount multiplier is not high enough to trigger fraud rules.
+tx_000342,card_018,60.0,False,0.9,Missing Device ID is normal for ATM transactions. No other fraud signals are present to suggest illicit activity.
+tx_000792,card_042,24.86,False,0.98,No fraud signals detected. The transaction is an in-person purchase within the cardholder's own country.
+tx_000665,card_036,20.0,False,0.95,"Only one boolean signal is True (Missing Device ID), which is expected for an ATM channel. The transaction amount and merchant are consistent with the cardholder's recent history."
+tx_000393,card_021,27.82,False,0.9,"While there is a Cross Border Mismatch, this is common for online retail. The cardholder has a history of shopping at Etsy, suggesting this is legitimate behavior."
+tx_000276,card_014,22.75,False,0.9,"Cross Border Mismatch is present, but typical for a global merchant like Amazon. No other suspicious signals or high-risk patterns were detected."
+tx_000701,card_037,180.46,False,0.85,The amount multiplier is elevated (4.6x) but does not reach the 10x threshold for automatic fraud. No boolean fraud signals are triggered.
+tx_000505,card_027,21.97,False,0.98,"No fraud signals are triggered, and the transaction amount is consistent with the cardholder's recent spending at grocery stores."
+tx_000077,card_004,65.41,False,0.95,"No fraud signals were detected. The amount multiplier is low, and the transaction is domestic and consistent with the cardholder's history."
+tx_000129,card_007,30.67,False,0.9,"No fraud signals were detected. While recent history shows Canadian merchants for a US cardholder, the current transaction is domestic and follows a likely travel pattern."
+tx_000875,card_047,19.73,False,0.95,No fraud signals were detected. The transaction is domestic and consistent with the user's previous online retail activity.
+tx_000181,card_009,28.11,False,0.95,"No fraud signals were detected. The amount multiplier is well below the fraud threshold, and the transaction is domestic."
+tx_000249,card_013,14.97,False,0.85,"Only one boolean signal (Cross Border Mismatch) is True. Given the online retail channel (eBay) and history of international shopping (AliExpress, Etsy), this is considered normal behavior."
+tx_000253,card_013,65.47,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. The transaction is consistent with the cardholder's history of online retail purchases using the same device ID.
+tx_000546,card_029,18.18,False,0.98,"No fraud signals were detected. The transaction is a local, in-person purchase within the cardholder's own country."
+tx_000768,card_041,11.93,False,0.98,"No fraud signals were detected. The transaction is a low-value, local, in-person purchase consistent with the cardholder's location."
+tx_000257,card_013,44.36,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. This transaction follows a established pattern of online shopping from the same device ID.
+tx_000243,card_012,13.99,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. The transaction amount and merchant category are consistent with the user's recent history on the same device.
+tx_000569,card_030,27.16,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present. Recent history shows the cardholder has been active in Canada, suggesting travel or residency."
+tx_000293,card_015,34.75,False,0.98,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and consistent with recent spending patterns."
+tx_000108,card_006,9.99,False,0.9,Cross Border Mismatch is expected for a global subscription service like Spotify. No other suspicious signals are present.
+tx_000285,card_015,32.62,False,0.98,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and aligns with previous activity."
+tx_000306,card_016,15.99,False,0.9,Cross Border Mismatch is expected for a global subscription service like Netflix. No other suspicious signals are present.
+tx_000681,card_037,58.44,False,0.98,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and consistent with recent spending patterns at gas stations."
+tx_000729,card_039,15.36,False,0.95,"No fraud signals detected. The transaction is in-person and matches the cardholder's country (GB), with a low amount multiplier."
+tx_000378,card_020,21.77,False,0.92,"No fraud signals detected. While the card history shows primarily online transactions, this in-person transaction is within the cardholder's country and has a low amount multiplier."
+tx_000670,card_036,78.69,False,0.85,"Only one signal (Cross Border Mismatch) is present. However, AliExpress is a global retailer based in China, making this a common legitimate transaction pattern for Canadian users."
+tx_000623,card_033,32.7,False,0.95,"No fraud signals detected. The transaction is in-person and matches the cardholder's country (GB), with no suspicious multipliers or flags."
+tx_000279,card_015,113.81,False,0.95,No boolean fraud signals were triggered. The transaction amount and merchant category are consistent with the cardholder's recent spending history at restaurants.
+tx_000595,card_032,53.99,False,0.98,No suspicious signals detected. The transaction is domestic and the amount multiplier is low.
+tx_000716,card_038,30.75,False,0.98,"No boolean fraud signals were triggered. The transaction is consistent with a pattern of low-value, in-person spending."
+tx_000949,card_042,1.4,False,0.85,"While there is a cross-border mismatch, recent history shows the cardholder has been making multiple transactions in Canada, suggesting travel. Only one boolean signal is True."
+tx_000950,card_042,4.48,True,0.92,"Two boolean signals are True: Cross Border Mismatch and Micro-Testing Detected. According to investigation rule 5, two or more True signals flag the transaction as fraud."
+tx_000951,card_042,5.04,True,0.9,"Two boolean signals (Cross Border Mismatch and Micro-Testing Detected) are True, which triggers the fraud flag according to investigation rule 5."
+tx_000953,card_042,14.38,True,0.95,"Two boolean signals are True. Additionally, this transaction represents a larger amount following a series of micro-tests, violating rule 2."
+tx_000952,card_042,7.46,True,0.9,"Two boolean signals (Cross Border Mismatch and Micro-Testing Detected) are True, meeting the criteria for fraud under rule 5."
+tx_000955,card_042,4.36,True,0.9,Two boolean signals are True. The transaction is part of a rapid sequence of cross-border online retail purchases.
+tx_000954,card_042,14.27,True,0.95,"Two boolean signals are True, and the transaction follows a clear pattern of micro-testing followed by a larger purchase amount."
+tx_000956,card_042,2.97,True,0.95,"Two boolean signals are True (Cross Border Mismatch and Micro-Testing Detected). The recent card history shows a pattern of rapid, small-value online transactions, which is characteristic of card testing."
+tx_000356,card_019,497.46,True,0.9,"The amount multiplier is 27.7x, which exceeds the 10x threshold defined in the investigation rules as strong evidence of fraud."
+tx_000761,card_041,43.26,False,0.98,"No fraud signals were triggered, and the transaction amount and merchant category are consistent with the cardholder's recent spending history."
+tx_000170,card_009,6.47,False,0.7,"While there is a Cross Border Mismatch, it is the only signal triggered. Per rule 3, this alone is not sufficient to flag fraud without additional suspicious factors."
+tx_000116,card_006,55.3,False,0.98,"No fraud signals were triggered, and the amount multiplier is low (1.7x), indicating a normal transaction pattern."
+tx_000881,card_047,90.73,False,0.95,No fraud signals detected. The transaction is an in-person grocery purchase within the cardholder's own country.
+tx_000822,card_044,3.79,False,0.98,No fraud signals detected. This is a low-value in-person grocery transaction within the cardholder's own country.
+tx_000815,card_043,33.98,False,0.85,"Only one boolean signal (Cross Border Mismatch) is present. Per investigation rules, this alone is insufficient to flag fraud without additional suspicious factors."
+tx_000288,card_015,140.74,False,0.95,No fraud signals detected. The transaction is an in-person gas purchase within the cardholder's own country.
+tx_000524,card_028,45.7,False,0.85,"Only one boolean signal (Cross Border Mismatch) is present. Per investigation rules, this alone is insufficient to flag fraud without additional suspicious factors."
+tx_000628,card_034,28.47,False,0.98,No suspicious signals detected. The transaction amount and merchant are consistent with the cardholder's location and recent spending history.
+tx_000428,card_023,39.21,False,0.98,No suspicious signals detected. The transaction is within normal parameters for the cardholder's typical online retail activity.
+tx_000489,card_026,30.88,False,0.98,No suspicious signals detected. The transaction is consistent with the cardholder's previous spending patterns and location.
+tx_000267,card_014,8.1,False,0.85,"While a cross-border mismatch is present, there are no other supporting fraud signals, and the transaction amount is low and consistent with travel."
+tx_000780,card_042,98.03,True,0.92,The transaction exhibits a high amount multiplier (8.9x) and is preceded by a clear pattern of micro-testing (three small transactions within 9 minutes) on the same device.
+tx_000324,card_017,194.41,False,0.85,"The amount multiplier is elevated at 8.6x, but it does not exceed the 10x threshold for automatic fraud flagging. No other boolean fraud signals are present."
+tx_000534,card_028,31.22,False,0.9,"While there is a cross border mismatch, the transaction amount is consistent with the cardholder's recent history of online retail purchases."
+tx_000218,card_011,14.09,False,0.98,"No fraud signals were detected, and the transaction amount is typical for a utility payment."
+tx_000528,card_028,58.1,False,0.98,This is an in-person transaction with no fraud signals detected and a normal amount multiplier.
+tx_000099,card_005,11.39,False,0.9,"A cross border mismatch is present for a common US-based retailer, but no other suspicious signals or missing device IDs were found."
+tx_000474,card_025,10.31,False,0.95,Only one boolean signal (Cross Border Mismatch) is present. This is common for online retail transactions with Amazon and does not meet the threshold for fraud.
+tx_000845,card_045,29.37,False,0.98,No fraud signals were detected. The transaction is domestic and the amount multiplier is within a normal range.
+tx_000880,card_047,46.05,False,0.98,No fraud signals were detected. The transaction is domestic and the amount is consistent with typical grocery spending.
+tx_000085,card_004,60.0,False,0.95,"While 'Missing Device ID' is true, this is expected and normal for the ATM channel. No other suspicious signals are present."
+tx_000566,card_030,92.96,False,0.9,"No fraud signals were detected. Although recent history shows transactions in another country, the current transaction is domestic and consistent with travel."
+tx_000045,card_002,41.05,False,0.95,"No suspicious signals detected. The amount multiplier is low, and there are no cross-border mismatches or fraud ring indicators."
+tx_000752,card_040,128.75,False,0.85,"Although the amount multiplier is 5.0x, it does not reach the extreme threshold (>10x) defined in the rules. No other boolean fraud signals were triggered."
+tx_000178,card_009,16.13,False,0.95,The transaction is domestic and shows no suspicious signal detectors or unusual spending patterns relative to the card history.
+tx_000607,card_033,21.86,False,0.95,No fraud signals detected. The transaction amount is consistent with previous spending and occurs within the cardholder's home country.
+tx_000453,card_024,27.68,False,0.95,No suspicious signals detected. The transaction is domestic and the amount multiplier is well within the normal range.
+tx_000126,card_007,26.77,False,0.95,"No fraud signals were triggered. The transaction is a low-value, in-person purchase within the cardholder's home country."
+tx_000644,card_034,8.99,False,0.95,No fraud signals were triggered. The transaction amount is low and consistent with the user's recent online shopping history.
+tx_000353,card_019,256.48,True,0.98,"The amount multiplier is 12.8x, which exceeds the 10x threshold for strong evidence of fraud. This is further supported by a cross-border mismatch."
+tx_000425,card_022,9.27,False,0.95,"No fraud signals were triggered. The transaction is a small, in-person grocery purchase in the cardholder's home country."
+tx_000203,card_010,4.52,False,0.95,No fraud signals were triggered. The transaction is a low-value purchase at a merchant the cardholder has visited previously.
+tx_000809,card_043,33.82,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present. Recent history shows a previous transaction at the same merchant for a similar amount, suggesting this is normal behavior."
+tx_000445,card_024,23.71,False,0.98,No fraud signals were detected. The transaction is consistent with the cardholder's history of in-person grocery and fuel purchases in Canada.
+tx_000637,card_034,7.33,False,0.95,No fraud signals were detected. The transaction amount is low and aligns with the cardholder's pattern of online retail spending.
+tx_000493,card_026,22.21,False,0.98,No fraud signals were detected. The transaction is a standard in-person purchase within the cardholder's own country.
+tx_000232,card_012,27.15,False,0.9,"No fraud signals were detected. Although the transaction channel (in-person) differs from recent online history, there are no indicators of fraudulent activity."
+tx_000414,card_022,29.27,False,0.98,"No fraud signals detected. The transaction is in-person, domestic, and consistent with the cardholder's history of grocery and fuel purchases."
+tx_000403,card_021,13.99,False,0.85,Only one boolean signal (Cross Border Mismatch) is present. This is typical for US-based subscription services like Netflix and does not meet the threshold for fraud.
+tx_000479,card_025,19.99,False,0.85,"Only one boolean signal (Cross Border Mismatch) is present. As a standard subscription payment to a US merchant, this is considered normal behavior."
+tx_000444,card_024,23.32,False,0.98,"No fraud signals detected. The transaction is in-person, domestic, and aligns with the user's recent spending at fuel stations and grocery stores."
+tx_000180,card_009,9.56,False,0.98,"No fraud signals detected. The transaction is in-person, domestic, and consistent with the cardholder's history of restaurant spending."
+tx_000658,card_035,19.99,False,0.95,"Only one boolean signal (Cross Border Mismatch) is present, which is typical for a US-based subscription service like Netflix used by a Canadian cardholder."
+tx_000408,card_021,21.7,False,0.99,"No fraud signals detected. The transaction is domestic, in-person, and consistent with the user's spending habits."
+tx_000244,card_012,31.96,False,0.95,Cross Border Mismatch is expected for a transaction with AliExpress (CN) and no other suspicious signals or missing device IDs were detected.
+tx_000884,card_047,6.52,False,0.98,"No fraud signals detected. While the amount is low, it is not flagged as micro-testing and the transaction is domestic."
+tx_000137,card_007,8.81,False,0.99,"No fraud signals detected. This is a domestic, in-person grocery purchase that aligns with the cardholder's recent history."
+tx_000903,card_049,100.0,False,0.9,"Only one boolean signal (Missing Device ID) is true, which is normal for an ATM channel. The amount multiplier is well below the fraud threshold."
+tx_000714,card_038,20.28,False,0.95,"No fraud signals were detected, and the transaction amount is consistent with the cardholder's recent spending history."
+tx_000682,card_037,29.52,False,0.9,"No fraud signals were detected. The transaction occurs in the cardholder's home country, and the amount is consistent with previous activity."
+tx_000213,card_011,21.39,False,0.95,"No fraud signals were detected, and the transaction is consistent with the cardholder's location and spending patterns."
+tx_000381,card_020,40.67,False,0.85,"While a Cross Border Mismatch is present, the cardholder's history shows frequent transactions with Canadian merchants, including the same merchant in this transaction."
+tx_000512,card_027,33.83,False,0.98,No fraud signals were triggered. The transaction amount and merchant category are consistent with the cardholder's recent spending history.
+tx_000078,card_004,40.0,False,0.95,"While 'Missing Device ID' is true, this is normal for an ATM channel transaction. No other suspicious signals or patterns were detected."
+tx_000358,card_019,112.72,False,0.98,No fraud signals were triggered. The transaction is for a grocery merchant and is consistent with previous high-value spending at the same merchant.
+tx_000996,card_032,791.49,True,0.99,"The amount multiplier is 19.2x, which significantly exceeds the 10x threshold defined as strong evidence of fraud."
+tx_001000,card_037,399.49,False,0.75,"The amount multiplier is high (9.7x) but does not exceed the 10x threshold, and no other boolean fraud signals are present."
+tx_000995,card_002,735.44,True,0.95,"The amount multiplier is 29.4x, which far exceeds the 10x threshold defined as strong evidence of fraud."
+tx_000997,card_038,356.29,True,0.95,"The amount multiplier is 18.9x, indicating a transaction amount significantly higher than the cardholder's recent spending patterns."
+tx_000475,card_025,20.0,False,0.9,"The missing device ID is normal for an ATM channel transaction, and the amount is consistent with recent history."
+tx_000368,card_020,13.99,False,0.9,Cross border mismatch is expected for Spotify as it is a global service headquartered in Sweden.
+tx_000699,card_037,111.31,False,0.7,"Only one boolean signal is true (Cross Border Mismatch) and the amount multiplier is low, which does not meet the threshold for fraud."
+tx_000999,card_039,370.5,True,0.95,The transaction exhibits a very high amount multiplier (29.9x) and a cross-border mismatch between the cardholder (GB) and merchant (CA).
+tx_000998,card_046,935.27,True,0.98,"The amount multiplier is extremely high (58.5x), which is strong evidence of fraud according to investigation rules."
+tx_000677,card_036,32.19,False,0.99,No fraud signals detected; the amount is consistent with the cardholder's recent spending history.
+tx_000613,card_033,220.46,False,0.85,"While the amount is higher than previous transactions (6.4x), it does not exceed the 10x threshold and no other fraud signals are present."
+tx_000530,card_028,75.54,False,0.99,No fraud signals detected and the transaction amount is well within the normal spending range for this card.
+tx_000434,card_023,5.73,False,0.98,No fraud signals were triggered. The transaction amount is low and consistent with the cardholder's recent spending history.
+tx_000320,card_017,6.35,False,0.98,All signal detectors are negative. The transaction is a standard in-person grocery purchase with no suspicious patterns.
+tx_000050,card_002,18.92,False,0.95,"No fraud signals detected. While there is a larger online transaction in the history, this specific in-person transaction is low-value and typical."
+tx_000447,card_024,42.47,False,0.98,No fraud signals were triggered. The amount is consistent with previous gas station and grocery spending.
+tx_000273,card_014,55.68,False,0.92,"No fraud signals detected. The amount multiplier (2.4x) is well below the threshold for suspicion, and the location matches the cardholder's country."
+tx_000215,card_011,6.15,False,0.95,No suspicious signals detected. The transaction amount is consistent with the cardholder's history of utility and subscription payments.
+tx_000835,card_044,229.88,True,0.98,"The amount multiplier is extremely high (60.7x), which is strong evidence of fraud per Rule 4. Additionally, a $229.88 spend at a restaurant is highly anomalous compared to the previous $3.79 transaction."
+tx_000133,card_007,60.0,False,0.9,"While 'Missing Device ID' is true, this is an ATM transaction where device IDs are typically not applicable. No other fraud signals are present."
+tx_000031,card_001,24.83,False,0.95,No red flags detected. The transaction is domestic and the amount is within a normal range for the user's spending patterns.
+tx_000771,card_041,9.99,False,0.85,"Although there is a cross-border mismatch, it is for a known US-based subscription service (Disney+), which is common for Canadian users. No other suspicious signals were triggered."
+tx_000164,card_008,33.76,False,0.98,"No suspicious signals detected. The transaction is in-person, within the cardholder's country, and consistent with recent grocery and fuel spending."
+tx_000840,card_044,21.77,True,0.75,"Cross Border Mismatch detected. The cardholder is based in GB, but the transaction is in the US, and recent history shows activity in CA, indicating highly suspicious geographic hopping."
+tx_000001,card_000,115.44,False,0.98,No suspicious signals detected. The transaction is a standard utility payment within the cardholder's home country and aligns with previous utility payments.
+tx_000755,card_040,5.37,False,0.98,No suspicious signals detected. The transaction is a low-value in-person purchase consistent with the cardholder's local activity.
+tx_000382,card_020,21.34,False,0.98,"No suspicious signals detected. The transaction is in-person, within the cardholder's country, and matches the spending pattern for gas stations."
+tx_000452,card_024,17.5,False,0.95,The transaction is in the cardholder's home country with no suspicious signals and is consistent with recent grocery spending patterns.
+tx_000616,card_033,9.99,False,0.85,"While there is a cross-border mismatch, the merchant is Spotify (based in Sweden), which is normal for this service. No other fraud signals are present."
+tx_000830,card_044,51.48,False,0.9,The transaction occurs in the cardholder's home country with no boolean fraud signals and an amount multiplier well below the fraud threshold.
+tx_000440,card_023,15.99,False,0.95,The transaction is in the cardholder's home country with no suspicious signals and aligns with the user's recent grocery shopping history.
+tx_000832,card_044,18.46,False,0.9,The transaction occurs in the cardholder's home country with no boolean fraud signals and is consistent with recent restaurant spending.
+tx_000048,card_002,38.76,False,0.85,"Only one boolean signal (Cross Border Mismatch) is present. Per Rule 3, this alone is not sufficient for a fraud flag, especially without a missing device ID."
+tx_000415,card_022,36.93,False,0.98,No fraud signals detected. The transaction is an in-person purchase within the cardholder's home country with a normal amount multiplier.
+tx_000882,card_047,16.52,True,0.95,"Fraud Ring Detected is True. According to Investigation Rule 1, this is a high-confidence indicator of fraudulent activity."
+tx_000220,card_011,64.44,False,0.9,"No boolean fraud signals are present. While the amount multiplier is 4.6x, it does not meet the >10x threshold required for a strong fraud evidence flag."
+tx_000327,card_017,82.19,False,0.9,No boolean fraud signals are present. The transaction is domestic and the amount multiplier is well below the critical threshold.
+tx_000851,card_045,200.0,False,0.9,"Only one boolean signal (Missing Device ID) is present, which is normal for an ATM channel. The amount multiplier (5.6x) is elevated but does not meet the threshold for extreme fraud (>10x)."
+tx_000638,card_034,20.99,False,0.95,No fraud signals were detected. The transaction amount and merchant are consistent with the cardholder's recent history and device usage.
+tx_000801,card_043,12.13,False,0.95,No fraud signals were detected. The transaction is consistent with previous payments to the same merchant using the same device.
+tx_000376,card_020,21.83,False,0.95,No fraud signals were detected. The transaction amount is within the normal range for the cardholder's recent spending patterns.
+tx_000843,card_045,30.84,False,0.8,"While a Cross Border Mismatch is detected, it is the only boolean signal present. Recent history shows a consistent pattern of transactions in Canada, suggesting travel rather than fraud."
+tx_000624,card_034,20.0,False,0.1,"Only one signal (Missing Device ID) is present, which is expected and normal for an ATM transaction channel. The amount and merchant are consistent with the cardholder's recent history."
+tx_000157,card_008,25.75,False,0.05,No fraud signals were detected. The transaction amount and merchant category are consistent with the cardholder's typical in-person spending patterns.
+tx_000349,card_019,65.12,False,0.05,No fraud signals were detected. The transaction is a standard grocery purchase consistent with the cardholder's history of shopping at similar merchants.
+tx_000686,card_037,23.83,True,0.85,"The transaction shows a Cross Border Mismatch (GB cardholder, CA merchant). This is combined with highly suspicious 'other factors,' specifically the use of three different device IDs for online transactions within a four-hour window."
+tx_000803,card_043,11.61,False,0.05,No fraud signals were detected. The transaction is consistent with the cardholder's history of online retail purchases using a consistent device ID.
+tx_000922,card_030,696.48,True,0.9,"The amount multiplier is 15.6x, which is extremely high compared to the cardholder's recent spending history, triggering Rule 4."
+tx_000982,card_000,34.86,False,0.95,No suspicious signals detected. The transaction amount and location are consistent with the cardholder's history.
+tx_000983,card_000,1032.48,True,0.98,"This transaction exhibits both a cross-border mismatch and an extremely high amount multiplier (15.4x), strongly indicating fraud."
+tx_000662,card_036,20.0,False,0.9,"While the Device ID is missing, this is normal for the ATM channel. The amount is consistent with previous ATM activity."
+tx_000598,card_032,57.76,False,0.95,No suspicious signals detected. The transaction amount is consistent with typical spending for the gas category.
+tx_000120,card_006,90.87,False,0.95,No fraud signals detected. The amount multiplier is low and the merchant is consistent with the cardholder's previous transaction history.
+tx_000760,card_041,37.45,False,0.95,No fraud signals detected. The transaction is domestic and the amount is within a normal range for the merchant category.
+tx_000603,card_032,70.84,False,0.95,No fraud signals detected. The amount multiplier is low and there are no suspicious boolean flags triggered.
+tx_000984,card_045,17.63,False,0.95,No fraud signals detected. The transaction is domestic (FR) and the amount multiplier is very low.
+tx_000282,card_015,57.71,False,0.95,No fraud signals detected. The transaction is domestic and the amount is consistent with typical spending patterns.
+tx_000985,card_045,1274.84,True,0.99,"The transaction exhibits an extremely high amount multiplier (41.3x) and a cross-border mismatch for a high-risk gift card purchase, violating Rule 4."
+tx_000485,card_026,32.54,False,0.98,"The transaction is domestic, has a low amount multiplier, and is consistent with the cardholder's recent spending history."
+tx_000978,card_019,96.81,False,0.95,This is a domestic transaction with no triggered fraud signals and an amount consistent with previous retail activity.
+tx_000979,card_019,378.05,True,0.88,Cross-border mismatch combined with a high-risk gift card merchant and a sudden shift from local grocery spending to international online purchases.
+tx_000890,card_048,34.23,False,0.97,Low-value domestic transaction at a restaurant that aligns with the cardholder's established spending patterns.
+tx_000854,card_045,80.0,False,0.9,"Only one boolean signal (Missing Device ID) is True, which is normal for an ATM channel. No other fraud rules were triggered."
+tx_000529,card_028,126.89,False,0.95,No fraud signals detected and the transaction amount is consistent with the cardholder's recent spending patterns.
+tx_000478,card_025,15.99,False,0.85,"Cross Border Mismatch is present, but it is for a known subscription service (Disney+) and no other suspicious signals were detected."
+tx_000265,card_014,10.67,False,0.95,No fraud signals detected and the transaction is a low-value in-person purchase within the cardholder's home country.
+tx_000589,card_032,31.76,False,0.9,"No fraud signals detected for this transaction, and the merchant location matches the cardholder's country."
+tx_000648,card_035,19.99,False,0.95,"Only one signal (Cross Border Mismatch) is present, which is expected for a US-based subscription service like Disney+ used by a Canadian cardholder."
+tx_000459,card_024,77.61,False,0.98,No fraud signals detected. The amount multiplier is low and the transaction is a standard in-person grocery purchase within the cardholder's country.
+tx_000737,card_039,6.52,False,0.98,No fraud signals detected. The transaction is a low-value in-person grocery purchase consistent with the cardholder's location.
+tx_000398,card_021,131.36,False,0.9,"No fraud signals detected. Although the amount is higher than previous transactions, the multiplier (3.4x) is well below the 10x threshold for high-risk flags."
+tx_000627,card_034,17.87,False,0.98,No fraud signals detected. The transaction amount is consistent with the cardholder's recent spending history and occurs within their own country.
+tx_000828,card_044,43.59,False,0.9,"While there is a cross-border mismatch, recent history shows the cardholder has been making in-person transactions in Canada (La Banquise, Chipotle), suggesting they are traveling."
+tx_000759,card_040,3.46,False,0.99,"No fraud signals detected; the transaction is a small, in-person purchase consistent with the cardholder's location."
+tx_000308,card_016,24.36,False,0.99,No fraud signals detected; the transaction is consistent with previous utility payments made to the same merchant.
+tx_000856,card_046,80.0,False,0.85,"The 'Missing Device ID' signal is normal for ATM transactions, and no other fraud rules (such as high amount multiplier or fraud ring) were triggered."
+tx_000087,card_004,20.0,False,0.9,"The 'Missing Device ID' signal is normal for ATM transactions, and the amount is consistent with the cardholder's recent ATM usage history."
+tx_000522,card_028,16.97,False,0.98,No fraud signals were triggered. The transaction is consistent with the cardholder's history of gas and grocery spending within Canada.
+tx_000051,card_002,33.64,False,0.98,All signal detectors are negative and the amount multiplier is within a normal range. The transaction matches the cardholder's country.
+tx_000014,card_000,13.49,False,0.98,No fraud signals detected. The merchant is a recurring utility provider already present in the cardholder's recent history.
+tx_000819,card_044,41.33,False,0.98,No fraud signals were triggered. The transaction is a standard in-person grocery purchase within the cardholder's home country.
+tx_000331,card_018,22.44,False,0.98,No fraud signals detected. The transaction amount is typical for the merchant category and aligns with the cardholder's location.
+tx_000234,card_012,14.45,False,0.98,No fraud signals detected. The transaction is domestic and the amount is consistent with the cardholder's recent spending history.
+tx_000796,card_042,26.55,False,0.98,No fraud signals detected. The transaction is domestic and the amount multiplier is well below the threshold for suspicion.
+tx_000311,card_016,126.47,False,0.9,"While the amount multiplier is 5.1x, it does not exceed the 10x threshold, and no other boolean fraud signals are present."
+tx_000564,card_030,20.87,False,0.85,"A cross border mismatch is present, but recent history shows multiple transactions in Canada (Cafe Olimpico, Best Buy), indicating the cardholder is likely traveling."
+tx_000661,card_036,50.92,False,0.98,No fraud signals detected. The transaction is domestic and aligns with the cardholder's general spending patterns.
+tx_000312,card_017,8.23,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. The amount is low and does not trigger micro-testing or high-multiplier rules.
+tx_000300,card_016,22.69,False,0.95,No fraud signals detected. The transaction is domestic and the amount is consistent with previous spending patterns.
+tx_000654,card_035,61.71,False,0.9,No fraud signals detected. The amount multiplier (3.0x) is well below the 10x threshold required for a fraud flag.
+tx_000201,card_010,26.05,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present. Without a missing device ID or other signals, this is typical for online retail."
+tx_000177,card_009,57.64,False,0.9,"No fraud signals detected. Although the amount multiplier is 5.3x, it does not meet the high-risk threshold of 10x."
+tx_000579,card_031,100.0,False,0.9,"Only one signal (Missing Device ID) is present, which is expected and normal for an ATM transaction channel."
+tx_000333,card_018,16.17,False,0.98,No fraud signals detected and the transaction amount is consistent with the user's spending patterns.
+tx_000430,card_023,23.97,False,0.98,No fraud signals detected and the transaction amount is consistent with the user's spending patterns.
+tx_000214,card_011,17.36,False,0.98,No fraud signals detected and the transaction amount is consistent with the user's spending patterns.
+tx_000838,card_044,28.92,False,0.85,"While a cross-border mismatch is present, there are no other supporting fraud signals or missing device IDs to indicate fraud."
+tx_000858,card_046,15.42,False,0.95,"No fraud signals detected. The transaction is domestic, in-person, and the amount is consistent with the merchant category."
+tx_000641,card_034,60.0,False,0.9,"Only one boolean signal is true (Missing Device ID), which is expected for an ATM channel transaction. The amount multiplier is not high enough to trigger fraud alerts."
+tx_000667,card_036,25.09,False,0.85,"While there is a cross-border mismatch, AliExpress is a known international retailer. No other suspicious signals or missing device IDs were detected."
+tx_000756,card_040,11.99,False,0.9,"Cross-border mismatch is present, but Netflix is a US-based subscription service, making this a standard transaction pattern."
+tx_000712,card_038,30.99,False,0.95,"No fraud signals detected. The transaction is a domestic, in-person grocery purchase with a normal amount multiplier."
+tx_000117,card_006,66.18,False,0.95,"No fraud signals were detected. The transaction is in-person, within the cardholder's country, and the amount is consistent with recent history."
+tx_000113,card_006,13.99,False,0.85,Only one signal (Cross Border Mismatch) is present. This is common for US-based subscription services like Disney+ and is not accompanied by other suspicious factors like a missing device ID.
+tx_000419,card_022,11.99,False,0.85,Only one signal (Cross Border Mismatch) is present. This is common for US-based subscription services like Disney+ and is not accompanied by other suspicious factors.
+tx_000915,card_049,67.25,False,0.95,No fraud signals were detected. The transaction is within the cardholder's country and the amount multiplier is well within normal limits.
+tx_000567,card_030,34.66,False,0.95,"No fraud signals were detected. The transaction is in-person and within the cardholder's country, showing no signs of suspicious activity."
+tx_000488,card_026,8.83,False,0.98,No fraud signals detected. The transaction amount is low and consistent with the cardholder's history of small purchases at gas stations and cafes.
+tx_000343,card_018,41.8,False,0.98,No fraud signals detected. The transaction is domestic and aligns with the cardholder's recent spending patterns in Canada.
+tx_000631,card_034,7.31,False,0.98,No fraud signals detected. The transaction is a low-value domestic purchase consistent with the cardholder's location.
+tx_000384,card_020,44.39,False,0.85,"While a cross-border mismatch is present, the card history shows a previous transaction at Petro-Canada (CA), suggesting the user is traveling or shopping internationally."
+tx_000481,card_026,41.42,False,0.98,No fraud signals detected. The transaction is domestic and fits the cardholder's established pattern of gas station and coffee shop spending.
+tx_000472,card_025,200.0,True,0.85,"The amount multiplier is extremely high (10.0x), representing a significant spike from the cardholder's recent history of small transactions ($15-$20)."
+tx_000876,card_047,14.73,False,0.9,"Only a cross-border mismatch is detected, which is common for online retail transactions with Amazon US, and the amount is consistent with history."
+tx_000100,card_005,15.01,False,0.95,"No fraud signals were triggered, and the transaction amount is well within the cardholder's normal spending range."
+tx_000392,card_021,58.55,False,0.9,"No fraud signals were triggered, and the transaction is a standard in-person purchase consistent with the cardholder's location."
+tx_000373,card_020,33.64,False,0.95,"No fraud signals were triggered, and the transaction amount is consistent with previous online retail spending."
+tx_000864,card_046,20.0,False,0.95,"Only one boolean signal (Missing Device ID) is true, which is expected for an ATM transaction. The amount is consistent with the cardholder's history."
+tx_000626,card_034,24.73,False,0.99,"No fraud signals were detected, and the amount multiplier is low, indicating a normal transaction."
+tx_000516,card_027,122.95,False,0.9,"No boolean fraud signals are present. While the amount multiplier is 4.0x, it does not meet the threshold for high-risk fraud."
+tx_000514,card_027,100.0,False,0.9,"Only one boolean signal (Missing Device ID) is true, which is normal for the ATM channel. The amount multiplier is within acceptable limits."
+tx_000090,card_005,40.0,False,0.9,"Only one boolean signal (Missing Device ID) is true, which is standard for ATM transactions. No other suspicious activity was detected."
+tx_000663,card_036,79.04,False,0.95,No fraud signals detected. The transaction is domestic and the amount is within a reasonable range compared to the cardholder's recent history.
+tx_000902,card_048,14.42,False,0.98,No fraud signals detected. The transaction is domestic and the amount is consistent with previous online retail spending patterns.
+tx_000574,card_031,24.44,False,0.85,"Only one signal (Cross Border Mismatch) is present, which is common for online retail platforms like Etsy. No other suspicious indicators are present."
+tx_000827,card_044,55.66,False,0.95,No fraud signals detected. The transaction is domestic and the amount is consistent with the user's previous grocery spending.
+tx_000344,card_018,100.0,False,0.9,"Only one signal (Missing Device ID) is present, which is normal for ATM transactions. The amount multiplier is not high enough to be considered fraudulent."
+tx_000581,card_031,13.81,False,0.98,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and consistent with previous grocery spending."
+tx_000749,card_040,41.5,False,0.98,"No fraud signals detected. The amount multiplier is low, and the transaction is consistent with the cardholder's location and merchant category."
+tx_000322,card_017,21.83,False,0.98,No fraud signals detected. The transaction is consistent with the cardholder's history of online retail purchases.
+tx_000262,card_014,5.48,False,0.85,"While a cross-border mismatch is present, it is the only signal triggered. The low amount and history of online shopping suggest legitimate international use."
+tx_000829,card_044,100.0,False,0.95,"Missing Device ID is expected for an ATM channel transaction. No other fraud signals are present, and the location matches the cardholder's country."
+tx_000433,card_023,106.9,False,0.9,"No boolean fraud signals were triggered. While the amount multiplier is 5.4x, it does not meet the >10x threshold for automatic fraud detection."
+tx_000720,card_038,14.31,False,0.95,No fraud signals detected. The transaction amount is low and consistent with typical restaurant spending.
+tx_000458,card_024,40.0,False,0.9,"Only one boolean signal (Missing Device ID) is present, which is considered normal for the ATM transaction channel."
+tx_000825,card_044,40.0,False,0.9,"Only one boolean signal (Missing Device ID) is present, which is expected for an ATM transaction and does not trigger fraud rules."
+tx_000676,card_036,28.46,False,0.95,No fraud signals detected. The transaction is consistent with the cardholder's recent history of gas station purchases.
+tx_000633,card_034,12.76,False,0.85,Only one boolean signal (Cross Border Mismatch) is present. The amount is low and does not trigger any other fraud rules.
+tx_000893,card_048,27.06,False,0.85,Only one boolean signal (Cross Border Mismatch) is present. The amount is reasonable for the merchant and no other suspicious signals were detected.
+tx_000774,card_041,471.21,True,0.95,"The amount multiplier is 17.6x, which exceeds the 10x threshold defined as strong evidence of fraud."
+tx_000258,card_013,56.3,False,0.9,"No fraud signals were detected, and the transaction amount is consistent with the cardholder's typical spending."
+tx_000055,card_003,33.11,False,0.9,"No fraud signals were detected, and the transaction is a standard in-person grocery purchase."
+tx_000740,card_040,170.53,False,0.8,"The amount multiplier is elevated at 7.7x, but it does not meet the >10x threshold for automatic fraud detection. No other boolean fraud signals were triggered."
+tx_000605,card_033,107.66,False,0.9,"No fraud signals were detected, and the amount multiplier is within a normal range for the cardholder's history."
+tx_000451,card_024,51.91,False,0.9,The transaction is consistent with the cardholder's grocery spending patterns and no fraud signals were triggered.
+tx_000660,card_036,44.21,False,0.9,"No fraud signals were detected, and the transaction amount is consistent with previous spending behavior."
+tx_000003,card_000,11.77,False,0.9,"No fraud signals were detected, and the transaction amount is low and consistent with typical restaurant spending."
+tx_000509,card_027,19.82,False,0.98,No fraud signals were triggered. The transaction amount is low and consistent with the cardholder's recent spending history in Canada.
+tx_000790,card_042,18.24,False,0.98,No fraud signals were triggered. The transaction is domestic and aligns with the cardholder's previous grocery spending.
+tx_000698,card_037,174.12,False,0.85,"Although the amount is high for a restaurant, the multiplier (3.5x) is well below the 10x fraud threshold, and no boolean signals are True."
+tx_000128,card_007,40.0,False,0.9,"Only one boolean signal (Missing Device ID) is True, which is expected and normal for ATM channel transactions."
+tx_000510,card_027,63.43,False,0.98,No fraud signals were triggered. The transaction is consistent with the cardholder's location and follows a pattern of local spending.
+tx_000568,card_030,39.07,False,0.95,"Only one signal (Cross Border Mismatch) is present, which is common for global retailers like AliExpress. The transaction amount is consistent with the cardholder's recent spending history."
+tx_000072,card_003,81.0,False,0.9,"Only one signal (Cross Border Mismatch) is present, which is typical for eBay transactions. The amount is slightly higher than previous transactions but does not trigger any fraud rules."
+tx_000130,card_007,12.34,False,0.99,"No fraud signals detected. This is a low-value, in-person grocery purchase that aligns perfectly with the cardholder's history."
+tx_000457,card_024,34.48,False,0.99,No fraud signals detected. The transaction is a standard in-person grocery purchase within the cardholder's home country.
+tx_000778,card_041,69.94,False,0.9,"No fraud signals detected. Although the amount is slightly high for a restaurant purchase, it does not meet the criteria for fraud based on the provided rules."
+tx_000278,card_015,46.65,False,0.95,No fraud signals were triggered. The transaction amount is consistent with the cardholder's recent spending history.
+tx_000674,card_036,200.0,False,0.8,"Only one boolean signal (Missing Device ID) is present, which is expected for an ATM channel transaction. The amount multiplier is elevated but does not meet the fraud threshold."
+tx_000766,card_041,475.35,True,0.9,"The amount multiplier is 11.8x, which exceeds the 10x threshold defined in the investigation rules as strong evidence of fraud."
+tx_000869,card_046,56.29,False,0.95,No fraud signals were triggered and the transaction amount is reasonable given the merchant category and history.
+tx_000757,card_040,5.95,False,0.95,"No fraud signals were triggered and the transaction amount is very low, showing no signs of suspicious activity."
+tx_000012,card_000,19.81,False,0.98,No fraud signals were detected. The transaction amount is low and consistent with the cardholder's recent spending history.
+tx_000032,card_001,51.34,False,0.98,No fraud signals were detected. The cardholder has a documented history of previous successful transactions with this specific merchant.
+tx_000125,card_007,19.14,False,0.98,No fraud signals were detected. The transaction is a standard grocery purchase consistent with the user's location and history.
+tx_000149,card_008,96.96,False,0.92,"Although the amount multiplier is 3.0x, it does not meet the high-risk threshold (>10x). There are no boolean fraud signals and the merchant is a recurring one in the history."
+tx_000550,card_029,18.54,False,0.85,"A cross-border mismatch is present, but this is common for online retail platforms like Etsy. No other suspicious signals or missing device IDs were detected."
+tx_000810,card_043,20.08,False,0.95,"Only one boolean signal (Cross Border Mismatch) is True, which is common for online retail at Amazon. No other suspicious indicators or high multipliers are present."
+tx_000313,card_017,31.47,False,0.98,"No fraud signals were detected. The transaction is domestic, in-person, and the amount multiplier is within a normal range."
+tx_000409,card_021,30.12,False,0.95,"Only one boolean signal (Cross Border Mismatch) is True, which is typical for online shopping at Etsy. No other red flags were triggered."
+tx_000019,card_000,74.42,False,0.98,No fraud signals were detected. The transaction is domestic and in-person with a reasonable amount multiplier.
+tx_000602,card_032,29.45,False,0.98,"No fraud signals were detected. The transaction is domestic and in-person, and the amount is lower than the cardholder's average."
+tx_000684,card_037,49.58,False,0.95,No fraud signals were triggered. The transaction is domestic and the amount is consistent with the cardholder's spending patterns.
+tx_000039,card_002,11.99,False,0.85,"While there is a cross-border mismatch, it is for a global subscription service (Spotify) based in Sweden. No other suspicious signals or missing device IDs were detected."
+tx_000464,card_025,9.99,False,0.9,"Cross-border mismatch is present for a US-based service (Disney+), but the cardholder's history shows a previous legitimate transaction with the same merchant."
+tx_000261,card_014,51.29,False,0.9,The transaction is domestic and no boolean fraud signals were triggered. The amount multiplier (3.1x) is elevated but well below the 10x threshold for fraud.
+tx_000484,card_026,20.06,False,0.95,No fraud signals were triggered. The transaction is domestic and the amount is within a normal range for the merchant category.
+tx_000134,card_007,20.72,False,0.9,"Only one boolean signal (Cross Border Mismatch) is present. Recent history shows consistent activity in Canada (BMO, Loblaws, IGA), suggesting the US cardholder is traveling."
+tx_000572,card_031,56.96,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. Shopping at Amazon.com is a common and normal behavior for Canadian cardholders.
+tx_000622,card_033,20.14,False,0.95,"No fraud signals were detected, and the transaction occurred within the cardholder's home country."
+tx_000679,card_036,96.35,False,0.95,"No fraud signals were detected, and the transaction occurred within the cardholder's home country."
+tx_000669,card_036,83.4,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. Shopping at eBay is a common and normal behavior for Canadian cardholders.
+tx_000212,card_011,8.71,False,0.1,No suspicious signals detected. The transaction is consistent with the cardholder's location and spending history.
+tx_000968,card_038,11.21,True,0.85,Part of a rapid sequence of small online transactions from a new device (dev_52f96bdf). This pattern is highly characteristic of card testing.
+tx_000969,card_038,4.68,True,0.95,Cross-border mismatch combined with a rapid sequence of small transactions from a new device. This strongly indicates fraudulent activity.
+tx_000970,card_038,5.72,True,0.85,Part of a rapid sequence of small online transactions from a new device (dev_52f96bdf). This pattern is highly characteristic of card testing.
+tx_000977,card_038,5.39,True,0.85,Part of a rapid sequence of small online transactions from a new device (dev_52f96bdf). This pattern is highly characteristic of card testing.
+tx_000971,card_038,3.64,False,0.95,No fraud signals were triggered. The transaction amount is low and consistent with the cardholder's recent history.
+tx_000972,card_038,11.41,False,0.95,No fraud signals were triggered. The amount multiplier is low and there are no boolean flags indicating suspicious activity.
+tx_000973,card_038,2.7,False,0.95,No fraud signals were triggered. The transaction is within a normal amount range and matches the cardholder's country.
+tx_000974,card_038,11.57,False,0.95,No fraud signals were triggered. The transaction follows a pattern of small online retail purchases from the same device.
+tx_000976,card_038,4.17,False,0.95,No fraud signals were triggered. All boolean detectors are false and the amount multiplier is well below the fraud threshold.
+tx_000975,card_038,11.32,True,0.85,Cross border mismatch combined with a high-velocity pattern of small transactions in the recent history suggests card testing/micro-testing behavior.
+tx_000553,card_029,40.0,False,0.9,"Only one signal (Missing Device ID) is present, which is considered normal for the ATM transaction channel."
+tx_000411,card_021,90.0,False,0.95,No fraud signals detected and the transaction amount is within a reasonable range for the merchant category.
+tx_000659,card_035,29.37,False,0.95,No fraud signals detected and the transaction aligns with typical utility payment patterns.
+tx_000024,card_001,55.49,False,0.8,"While a cross border mismatch is present, there are no other supporting fraud signals or suspicious patterns in the card history."
+tx_000426,card_023,14.99,False,0.95,No fraud signals were triggered. The transaction amount is consistent with the cardholder's recent spending history in Canada.
+tx_000204,card_010,101.04,False,0.9,"No boolean fraud signals are present. While the amount multiplier is 3.9x, it does not meet the threshold for high-risk fraud evidence."
+tx_000462,card_024,40.0,False,0.95,"The only signal triggered is 'Missing Device ID', which is normal for ATM transactions. No other suspicious activity is present."
+tx_000275,card_014,15.13,False,0.9,No fraud signals were detected. The transaction is domestic (FR/FR) and the amount is consistent with previous restaurant spending.
+tx_000429,card_023,10.16,False,0.95,No fraud signals were triggered. The transaction is a low-value domestic purchase consistent with the user's history.
+tx_000523,card_028,80.0,False,0.95,"Only one signal (Missing Device ID) is present, which is standard and expected for an ATM channel transaction. No other suspicious patterns are detected."
+tx_000089,card_005,47.26,False,0.98,No boolean fraud signals were triggered. The amount multiplier (3.1x) is well below the threshold for high-risk activity.
+tx_000339,card_018,20.99,False,0.9,"While a cross-border mismatch is present, it is for a common online retailer (Amazon.com) and is not accompanied by a missing device ID or other risk signals."
+tx_000059,card_003,49.05,False,0.9,"A cross-border mismatch is detected, but the cardholder has a history of online shopping (eBay, Shopify), making this transaction consistent with user behavior."
+tx_000225,card_012,12.64,False,0.98,"No fraud signals were triggered, and the transaction is domestic with an amount consistent with the cardholder's history."
+tx_000652,card_035,15.99,False,0.9,"Only one boolean signal is present (Cross Border Mismatch), and Spotify is a known global subscription service, making this transaction typical for the merchant."
+tx_000939,card_023,10.98,True,0.7,"This transaction marks the start of a high-velocity sequence of small charges on a new device (dev_c71fd72a), which is characteristic of card-testing."
+tx_000940,card_023,11.58,True,0.8,Part of a rapid succession of small online retail transactions occurring within minutes on a newly introduced device.
+tx_000941,card_023,9.18,True,0.9,"Continued high-velocity spending pattern on the same new device, fitting the profile of a carding attack."
+tx_000945,card_023,2.54,True,0.9,"The fourth small transaction in a tight time window on a new device, confirming a systematic card-testing attempt."
+tx_000942,card_023,7.52,False,0.3,"Only one boolean signal (Cross Border Mismatch) is present, which does not meet the threshold for fraud according to Rule 5."
+tx_000947,card_023,1.5,False,0.1,No fraud signals were detected for this transaction.
+tx_000943,card_023,10.45,True,0.9,"Micro-testing detected and represents the largest transaction in a rapid sequence of small payments, triggering Rule 2."
+tx_000944,card_023,2.71,True,0.8,Micro-testing detected as part of a rapid sequence of low-value transactions across multiple merchants.
+tx_000946,card_023,3.51,True,0.8,Micro-testing detected as part of a rapid sequence of low-value transactions across multiple merchants.
+tx_000948,card_023,10.26,True,0.95,"Two boolean signals are True (Cross Border Mismatch and Micro-Testing Detected). The recent card history confirms a pattern of rapid, small-value transactions typical of card testing."
+tx_000112,card_006,31.98,False,0.98,"No fraud signals detected. The transaction is in-person, local, and consistent with the cardholder's history at the same merchant."
+tx_000708,card_038,12.99,False,0.9,"No fraud signals detected for this in-person transaction. While recent history shows small online purchases, this specific transaction shows no red flags."
+tx_000399,card_021,107.92,False,0.8,"Only one boolean signal (Cross Border Mismatch) is True, which is common for AliExpress. The amount multiplier is not extreme, and no other suspicious signals are present."
+tx_000168,card_009,19.99,False,0.98,No fraud signals detected. The transaction is a standard subscription amount within the cardholder's own country.
+tx_000618,card_033,23.99,False,0.99,No fraud signals detected. The transaction is consistent with the cardholder's country and spending patterns.
+tx_000776,card_041,6.35,False,0.99,No fraud signals detected. The small transaction amount is typical for the restaurant category and matches the cardholder's location.
+tx_000139,card_007,40.0,False,0.9,"Only one boolean signal (Missing Device ID) is present, which is normal and expected for transactions conducted via an ATM channel."
+tx_000645,card_035,13.99,False,0.85,"While a cross-border mismatch is present, it is common for US-based subscription services and is consistent with the cardholder's recent history of online US payments."
+tx_000868,card_046,197.49,False,0.8,"The amount multiplier is high (9.9x) but does not exceed the 10x threshold specified in the rules, and no other fraud signals are present."
+tx_000807,card_043,35.84,False,0.98,No fraud signals were triggered. The transaction amount is consistent with the cardholder's recent spending history and occurs within the same country.
+tx_000785,card_042,29.55,False,0.98,"No fraud signals were triggered. The merchant is one the cardholder has used previously, and there is no cross-border mismatch."
+tx_000092,card_005,20.33,False,0.98,No fraud signals were triggered. The transaction is for a merchant previously visited by the cardholder and the amount multiplier is low.
+tx_000247,card_013,55.77,False,0.98,No fraud signals were triggered. The transaction is consistent with previous gas station spending (Shell) and occurs in the cardholder's home country.
+tx_000197,card_010,42.97,False,0.98,No fraud signals were triggered. The transaction amount is reasonable and there are no indicators of fraud rings or micro-testing.
+tx_000871,card_047,22.95,False,0.9,Only one boolean signal (Cross Border Mismatch) is present. The amount is consistent with the cardholder's recent history of small online purchases.
+tx_000094,card_005,19.99,False,0.9,Cross Border Mismatch is common for US-based subscription services like Netflix. No other suspicious signals or patterns were detected.
+tx_000053,card_002,35.69,False,0.95,No fraud signals detected. The transaction is an in-person purchase within the cardholder's home country with a low amount multiplier.
+tx_000889,card_048,24.39,False,0.95,No fraud signals detected. The transaction is an in-person purchase within the cardholder's home country and aligns with typical spending.
+tx_000526,card_028,76.71,False,0.95,"No fraud signals detected. The transaction is a standard grocery purchase in the cardholder's home country, consistent with previous grocery spending."
+tx_000600,card_032,31.04,False,0.98,No fraud signals detected. The transaction is consistent with the cardholder's history of restaurant spending in Canada.
+tx_000169,card_009,8.9,False,0.98,No fraud signals detected. The transaction amount is low and aligns with the cardholder's general spending patterns.
+tx_000910,card_049,18.46,False,0.98,No fraud signals detected. The transaction is a standard online purchase within the cardholder's home country.
+tx_000104,card_005,51.23,False,0.95,"No fraud signals detected. While the amount multiplier is slightly elevated (2.6x), it is well below the fraud threshold and consistent with online retail behavior."
+tx_000088,card_004,20.09,False,0.98,No fraud signals detected. This is a routine in-person gas station transaction in the cardholder's home country.
+tx_000363,card_019,12.05,False,0.95,"No fraud signals were detected. The transaction is domestic, the amount is low, and it does not trigger any of the specified investigation rules."
+tx_000839,card_044,7.96,False,0.98,"No fraud signals were detected. This is an in-person grocery transaction within the cardholder's home country, which is considered normal behavior."
+tx_000365,card_019,11.99,False,0.85,Only one boolean signal (Cross Border Mismatch) is True. This is common for US-based subscription services like Disney+ and does not meet the threshold for fraud.
+tx_000238,card_012,31.56,False,0.85,"Only one boolean signal (Cross Border Mismatch) is True. The transaction uses a device ID consistent with the cardholder's recent history, suggesting legitimate activity."
+tx_000069,card_003,9.99,False,0.85,Only one boolean signal (Cross Border Mismatch) is True. This is typical for a Netflix subscription and does not trigger any other fraud rules.
+tx_000036,card_002,9.34,False,0.98,No fraud signals detected. The transaction amount is low and consistent with the cardholder's recent history of small restaurant and service purchases in Canada.
+tx_000733,card_039,46.27,False,0.92,"While there is a cross-border mismatch (GB cardholder, CA merchant), the card history shows a consistent pattern of spending in Canada (Tim Hortons, IGA), suggesting travel or residency."
+tx_000610,card_033,35.65,False,0.98,No fraud signals detected. The transaction is domestic (GB/GB) and the amount is consistent with the cardholder's typical spending patterns.
+tx_000303,card_016,140.17,False,0.95,"No boolean fraud signals are True. The amount multiplier (5.6x) is below the high-risk threshold of 10x, and the merchant is a standard utility provider consistent with the cardholder's location."
+tx_000715,card_038,35.41,False,0.9,"No fraud signals detected. Although recent history shows small online purchases, the 'Micro-Testing Detected' signal is False, and the current transaction is a standard in-person gas station purchase."
+tx_000196,card_010,25.45,False,0.95,"No suspicious signals detected. The transaction is in-person, within the cardholder's country, and the amount is consistent with recent history."
+tx_000105,card_006,63.31,False,0.85,Only one boolean signal (Cross Border Mismatch) is present. This is common for online retail transactions and is not accompanied by a missing device ID or an extreme amount multiplier.
+tx_000315,card_017,12.06,False,0.95,"No suspicious signals detected. The transaction is in-person, within the cardholder's country, and the amount is consistent with recent spending."
+tx_000885,card_047,141.56,False,0.75,"While the amount multiplier is elevated (6.8x), it does not reach the high-risk threshold of >10x, and no other boolean fraud signals are present."
+tx_000326,card_017,11.07,False,0.95,"No suspicious signals detected. The transaction is in-person, within the cardholder's country, and follows a pattern of low-value daily spending."
+tx_000138,card_007,40.61,False,0.95,No suspicious signals detected. The transaction amount is consistent with the cardholder's recent spending history.
+tx_000585,card_031,34.72,False,0.95,No suspicious signals detected. The amount multiplier is low and the transaction aligns with previous spending patterns.
+tx_000921,card_021,1148.2,True,0.9,"The amount multiplier is 23.9x, which exceeds the 10x threshold defined as strong evidence of fraud."
+tx_000115,card_006,107.83,False,0.9,No suspicious signals detected. The transaction amount is within a reasonable range of the cardholder's history.
+tx_000165,card_008,25.33,False,0.95,No suspicious signals detected. The transaction amount is consistent with previous grocery store spending.
+tx_000179,card_009,15.6,False,0.98,"No fraud signals detected. The transaction is domestic, the amount is consistent with the cardholder's history, and all boolean detectors are false."
+tx_000821,card_044,36.6,False,0.95,No fraud signals detected. The transaction matches the cardholder's country and the amount multiplier is within a normal range.
+tx_000297,card_016,65.21,False,0.92,"No fraud signals detected. While the amount multiplier is 2.5x, it is well below the high-risk threshold of 10x, and the transaction is domestic."
+tx_000537,card_028,69.47,False,0.98,No fraud signals detected. The transaction is domestic and the amount is consistent with previous spending patterns.
+tx_000816,card_043,13.99,False,0.88,"A cross-border mismatch is present, but this is common for online subscriptions like Disney+. No other suspicious signals or missing device IDs were detected."
+tx_000525,card_028,94.08,False,0.9,"Only one boolean signal (Cross Border Mismatch) is True, which is typical for AliExpress. No missing device ID or other suspicious indicators were detected."
+tx_000407,card_021,101.49,False,0.95,No fraud signals were triggered. The transaction is domestic and the amount multiplier is well within normal limits.
+tx_000465,card_025,44.8,False,0.95,No fraud signals were triggered. The transaction is domestic and consistent with the cardholder's general spending behavior.
+tx_000836,card_044,68.13,False,0.95,No fraud signals were triggered. The transaction is domestic and aligns with the cardholder's location and history.
+tx_000338,card_018,44.49,False,0.95,No fraud signals were triggered. The transaction is domestic and the amount is consistent with typical grocery store spending.
+tx_000710,card_038,22.71,False,0.95,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and the amount is consistent with recent spending patterns."
+tx_000672,card_036,22.8,False,0.95,"No fraud signals detected. The transaction is in-person, within the cardholder's country, and the amount multiplier is low."
+tx_000034,card_001,30.94,False,0.95,"No fraud signals detected. The transaction is online, within the cardholder's country, and aligns with the user's history of online utility and retail payments."
+tx_000688,card_037,112.32,False,0.9,"No fraud signals detected. Although the amount is higher than some previous transactions, it is an in-person transaction within the cardholder's country."
+tx_000450,card_024,80.0,False,0.95,"Only one boolean signal (Missing Device ID) is true, which is expected for ATM channel transactions. No other suspicious indicators are present."
+tx_000341,card_018,23.25,False,0.95,No fraud signals detected. The transaction amount and merchant category are consistent with the cardholder's recent spending history.
+tx_000136,card_007,40.0,False,0.9,"While Missing Device ID is True, this is normal for ATM channel transactions. No other suspicious signals were triggered."
+tx_000787,card_042,13.57,False,0.95,No fraud signals detected. The transaction is consistent with the user's history of grocery and fast food purchases.
+tx_000844,card_045,22.53,True,0.85,"Cross Border Mismatch is present, and recent history shows a high-value Apple Gift Card purchase, which is a strong indicator of fraudulent activity."
+tx_000174,card_009,34.05,False,0.75,"Cross Border Mismatch is detected, but without additional boolean signals or extreme amount multipliers, it is likely a legitimate international purchase."
+tx_000494,card_026,35.74,False,0.9,"Only one boolean signal (Cross Border Mismatch) is true. Recent history shows multiple transactions in Canada (Petro-Canada, Tim Hortons), suggesting the US cardholder is traveling."
+tx_000217,card_011,9.73,False,0.98,"No fraud signals detected. The transaction is local, the amount is low, and it is consistent with the cardholder's history."
+tx_000336,card_018,22.75,False,0.98,No fraud signals detected. The transaction is local and consistent with the cardholder's spending patterns.
+tx_000738,card_039,27.57,False,0.95,No fraud signals detected. The transaction is local to the cardholder's country and the amount multiplier is within a normal range.
+tx_000251,card_013,255.96,False,0.85,"Although the amount multiplier is elevated (4.6x), it does not reach the 10x threshold for automatic fraud detection, and no other boolean signals are true."
