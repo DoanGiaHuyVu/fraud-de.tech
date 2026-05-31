@@ -10,7 +10,7 @@ fraud-de.tech is an enterprise fraud triage dashboard for Trust & Safety analyst
 
 ```bash
 # 1. Clone the repo and enter the directory
-git clone <repo-url> && cd valsoft_mpchacks
+git clone https://github.com/DoanGiaHuyVu/fraud-de.tech.git && cd fraud-de.tech
 
 # 2. Install all dependencies
 pip install .
