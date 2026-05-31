@@ -1,0 +1,110 @@
+[
+  {
+    "timestamp": "2026-05-31T04:05:24.422743",
+    "transaction_id": "tx_000993",
+    "decision": "Escalate",
+    "probability_score": 1.0
+  },
+  {
+    "timestamp": "2026-05-31T04:07:24.520083",
+    "transaction_id": "tx_000993",
+    "decision": "Escalate",
+    "probability_score": 1.0
+  },
+  {
+    "timestamp": "2026-05-31T04:18:49.988785",
+    "transaction_id": "tx_000994",
+    "decision": "Dismiss",
+    "probability_score": 1.0
+  },
+  {
+    "timestamp": "2026-05-31T04:19:21.515240",
+    "transaction_id": "tx_000993",
+    "decision": "Escalate",
+    "probability_score": 1.0
+  },
+  {
+    "timestamp": "2026-05-31T04:20:31.189190",
+    "transaction_id": "tx_000994",
+    "decision": "Dismiss",
+    "probability_score": 1.0
+  },
+  {
+    "timestamp": "2026-05-31T04:20:31.311406",
+    "transaction_id": "tx_000992",
+    "decision": "Approve",
+    "probability_score": 1.0
+  },
+  {
+    "timestamp": "2026-05-31T08:26:31.237473",
+    "transaction_id": "tx_000993",
+    "decision": "Escalate",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T08:26:31.301940",
+    "transaction_id": "tx_000994",
+    "decision": "Dismiss",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T08:26:31.424656",
+    "transaction_id": "tx_000992",
+    "decision": "Approve",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T09:42:31.100995",
+    "transaction_id": "tx_000993",
+    "decision": "Escalate",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T09:42:31.177092",
+    "transaction_id": "tx_000997",
+    "decision": "Dismiss",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T09:42:31.323709",
+    "transaction_id": "tx_000947",
+    "decision": "Approve",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T09:51:30.620231",
+    "transaction_id": "tx_000993",
+    "decision": "Escalate",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T09:51:30.697816",
+    "transaction_id": "tx_000997",
+    "decision": "Dismiss",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  },
+  {
+    "timestamp": "2026-05-31T09:51:30.847623",
+    "transaction_id": "tx_000947",
+    "decision": "Approve",
+    "probability_score": 1.0,
+    "escalation_reason": "",
+    "analyst_notes": ""
+  }
+]

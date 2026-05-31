@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel | Cockpit</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <!-- TopNav -->
+    <nav class="topnav">
+        <div class="topnav-brand">
+            <span style="color: var(--primary-blue); font-size: 1.2rem;">🛡️</span>
+            Sentinel
+        </div>
+        <div class="topnav-actions">
+            <!-- Action Legend -->
+            <div class="action-buttons" style="margin-right: 12px;">
+                <div class="btn-action btn-approve" style="padding: 6px 12px; font-size: 0.8rem;"><kbd>A</kbd> Approve</div>
+                <div class="btn-action btn-dismiss" style="padding: 6px 12px; font-size: 0.8rem;"><kbd>D</kbd> Dismiss</div>
+                <div class="btn-action btn-escalate" style="padding: 6px 12px; font-size: 0.8rem;"><kbd>E</kbd> Escalate</div>
+                <button id="btn-undo" class="btn-action" style="background: transparent; color: var(--text-muted); border: 1px solid var(--border-color); padding: 6px 12px; font-size: 0.8rem; cursor: pointer;"><kbd>Z</kbd> Undo</button>
+            </div>
+
+            
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <input type="text" id="search-filter" placeholder="Search Card or Merchant..." style="padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); color: var(--text-main); font-size: 0.8rem; width: 180px;">
+            </div>
+
+            <span class="live-badge">Live Review Mode</span>
+            <span>Queue: <strong id="queue-count" style="color: var(--text-main);">0</strong> pending</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <label for="threshold">Min Risk: <strong id="threshold-val" style="color: var(--text-main);">80%</strong></label>
+                <input type="range" id="threshold" min="0" max="100" value="80" step="1">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+        <div id="loading" class="hidden" style="text-align: center; margin-top: 50px;">Loading queue...</div>
+        <div id="empty-state" class="hidden" style="text-align: center; margin-top: 50px;">
+            <h2>Queue Empty</h2>
+            <p class="text-muted">No transactions meet the current risk threshold.</p>
+        </div>
+
+        <div id="transaction-card" style="display: flex; flex-direction: column; gap: var(--spacing-sm); flex: 1; min-height: 0;">
+            
+            <!-- Investigation Header -->
+            <div class="investigation-header" style="display: flex; justify-content: space-between; align-items: flex-start; padding: 16px 0 8px 0; border: none; background: transparent;">
+                <div class="header-left">
+                    <h1 id="merchant" style="font-size: 1.8rem; font-weight: 700; color: var(--text-main); margin: 0 0 8px 0;">Gift Card Mall</h1>
+                    <div class="tags" id="tags-container"></div>
+                </div>
+                <div class="header-right">
+                    <div class="risk-score-pill" style="background: rgba(220,53,69,0.15); border: 1px solid var(--danger); color: var(--danger); padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                        <span id="risk-score">100%</span> Risk
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Layout (3-6-3 Grid) -->
+            <div class="dashboard-grid">
+                
+                <!-- Top Row (3-6-3) -->
+                <div class="row-top">
+                    <!-- Left: Case Facts (Span 3) -->
+                    <div class="card card-span-3 card-facts">
+                        <!-- Top facts row -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 16px;">
+                            <div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px;">AMOUNT (CAD)</div>
+                                <div id="amount" style="font-size: 1.2rem; font-weight: 700; color: var(--text-main);">$0.00</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px;">CARD ID</div>
+                                <div id="card-id" style="font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-top: 4px;">-</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px;">DATE</div>
+                                <div id="date" style="font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-top: 4px;">-</div>
+                            </div>
+                        </div>
+
+                        <div style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; margin-top: 16px;">PER-CARD BASELINE COMPARISON</div>
+                        <div class="baseline-row">
+                            <span class="baseline-label">Typical</span>
+                            <div class="baseline-track"><div class="baseline-fill safe" id="bar-median" style="width: 10%;"></div></div>
+                            <span class="baseline-value" id="val-median">$0.00</span>
+                        </div>
+                        <div class="baseline-row">
+                            <span class="baseline-label">Current</span>
+                            <div class="baseline-track"><div class="baseline-fill danger" id="bar-current" style="width: 100%;"></div></div>
+                            <span class="baseline-value" id="val-current">$0.00</span>
+                        </div>
+                        
+                        <div style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; margin-top: 24px;">LOCATION MISMATCH</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">
+                            Card: <span style="color: var(--text-main); font-weight: 600;">CA</span> &rarr; Merchant: <span style="color: var(--text-main); font-weight: 600;">US</span>
+                        </div>
+
+                        <!-- Hidden elements for app.js -->
+                        <div style="display: none;">
+                            <span id="location-text">CA -> US</span>
+                            <span id="val-ratio">35.8x</span>
+                            <p id="decision-summary"></p>
+                            <ul id="risk-list" class="risk-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Middle: Card History (Span 5) -->
+                    <div class="card card-span-5 card-history">
+                        <div class="card-title" style="text-transform: uppercase;">Card History (30 Days)</div>
+                        <div class="chart-wrapper">
+                            <canvas id="cardHistoryChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Right: AI Explanation (Span 4) -->
+                    <div class="card card-span-4 card-ai">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <h3 style="color: var(--danger); font-size: 0.9rem; margin: 0; font-weight: 600;">AI Explanation</h3>
+                            <button id="btn-gemma" class="btn-ai">✨ Ask AI</button>
+                        </div>
+                        <div class="ai-text" id="explanation" style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5;">Waiting for explanation...</div>
+                    </div>
+                </div>
+
+                <!-- Bottom Row (3-3-3-3) -->
+                <div class="row-bottom">
+                    <!-- Span 3: Risk Breakdown -->
+                    <div class="card card-span-3 card-radar">
+                        <div class="card-title" style="text-transform: uppercase;">Risk Factor Breakdown</div>
+                        <div class="chart-wrapper">
+                            <canvas id="riskRadarChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Span 3: Merchant Volume -->
+                    <div class="card card-span-3 card-velocity">
+                        <div class="card-title" id="merchantVolumeLabel" style="text-transform: uppercase;">Merchant Volume</div>
+                        <div class="chart-wrapper">
+                            <canvas id="merchantVolumeChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Span 3: Entity Network -->
+                    <div class="card card-span-3 card-network">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="card-title" style="margin-bottom: 0; text-transform: uppercase;">Entity Map</div>
+                            <div id="fraud-ring-stats" style="font-size: 0.65rem; color: var(--danger); font-weight: 700; text-align: right;"></div>
+                        </div>
+                        <div class="chart-wrapper">
+                            <div id="fraudRingChart"></div>
+                        </div>
+                    </div>
+
+                    <!-- Span 3: Geo Map -->
+                    <div class="card card-span-3 card-map" style="padding: 0; position: relative;">
+                        <div class="card-title" style="margin: 16px 16px 0 16px; position: absolute; z-index: 1000; font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted);">GEO-SPATIAL ORIGINS</div>
+                        <div class="chart-wrapper">
+                            <div id="geoMap"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-msg">Action recorded.</span> 
+        <span style="color: var(--text-muted); margin-left: 8px;">Press <kbd style="background: rgba(255,255,255,0.1); border:none; padding:2px 4px; font-weight:bold; color: white;">Z</kbd> to undo.</span>
+    </div>
+
+    <!-- Escalation Audit Modal -->
+    <div id="escalation-modal" class="modal-backdrop">
+        <div class="modal">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(15, 104, 255, 0.12); border: 1px solid rgba(15, 104, 255, 0.25); display: flex; align-items: center; justify-content: center; color: #0F68FF;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h2 style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #F7FAFF;">Audit Trail Required</h2>
+            </div>
+            <p style="color: #BEC3CE; font-size: 0.9rem; margin-bottom: 20px;">Please provide a reason and notes for this escalation to comply with banking regulations.</p>
+            
+            <div id="modal-case-summary" style="background: rgba(15, 104, 255, 0.08); border: 1px solid rgba(168, 200, 255, 0.16); border-radius: 8px; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <div style="font-size: 0.75rem; color: #A8B3C7; font-weight: 600; text-transform: uppercase;">Merchant</div>
+                    <div id="modal-merchant" style="font-size: 0.9rem; color: #F7FAFF; font-weight: 600;">-</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <div style="font-size: 0.75rem; color: #A8B3C7; font-weight: 600; text-transform: uppercase;">Card ID</div>
+                    <div id="modal-card-id" style="font-size: 0.9rem; color: #F7FAFF; font-weight: 600;">-</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <div style="font-size: 0.75rem; color: #A8B3C7; font-weight: 600; text-transform: uppercase;">Amount</div>
+                    <div id="modal-amount" style="font-size: 0.9rem; color: #F7FAFF; font-weight: 600;">-</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px; text-align: right;">
+                    <div style="font-size: 0.75rem; color: #A8B3C7; font-weight: 600; text-transform: uppercase;">Score</div>
+                    <div style="font-size: 0.9rem; color: #EF4444; font-weight: 700; background: rgba(239, 68, 68, 0.12); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(239, 68, 68, 0.45);"><span id="modal-risk">100%</span> Risk</div>
+                </div>
+            </div>
+            
+            <div class="modal-group">
+                <label>Escalation Reason</label>
+                <select id="escalation-reason" class="modal-control">
+                    <option value="Confirmed Fraud Ring">Confirmed Fraud Ring</option>
+                    <option value="Account Takeover">Account Takeover</option>
+                    <option value="Stolen Card (High Velocity)">Stolen Card (High Velocity)</option>
+                    <option value="Impossible Travel">Impossible Travel</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="modal-group">
+                <label>Analyst Notes</label>
+                <textarea id="escalation-notes" class="modal-control" rows="3" placeholder="Explain your reasoning for the investigation team..." style="resize: none;"></textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button id="btn-modal-cancel" class="btn-secondary">Cancel</button>
+                <button id="btn-modal-submit" class="btn-primary">Submit Escalation</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
