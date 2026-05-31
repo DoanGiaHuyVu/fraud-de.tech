@@ -44,6 +44,27 @@ transactions.csv
            └─> Streams to: logs/agent_investigation_results_partial.json
 ```
 
+- `evaluate_accuracy.py`: Compares the LLM's binary `is_fraud` decision against the deterministic ground truth from Section 5 of the notebook. Current performance:
+
+```text
+========================================
+🤖 AGENT ACCURACY REPORT 🤖
+========================================
+Total Transactions Evaluated: 605
+
+Accuracy:  95.70%
+Precision: 65.91% (When agent says fraud, how often is it right?)
+Recall:    72.50% (Out of all actual frauds, how many did the agent catch?)
+F1 Score:  69.05%
+
+Confusion Matrix:
+True Negatives (Correctly identified as Safe):  550
+False Positives (Falsely flagged as Fraud):     15
+False Negatives (Missed Frauds):                11
+True Positives (Correctly identified Fraud):    29
+========================================
+```
+
 ---
 
 ## 2. Tech Stack Decisions

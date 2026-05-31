@@ -142,8 +142,24 @@ We built a background Python script (`run_investigation.py`) that feeds a JSON-f
 
 **Result:** ✅ **Highly Successful.**
 When evaluated against our deterministic ground truth (`labeled_transactions.csv`), the LLM agent achieved the following performance on 605 transactions:
-- **Accuracy:** 95.70%
-- **Recall:** 72.50% (Caught the vast majority of actual fraud)
-- **Precision:** 65.91%
+
+```text
+========================================
+🤖 AGENT ACCURACY REPORT 🤖
+========================================
+Total Transactions Evaluated: 605
+
+Accuracy:  95.70%
+Precision: 65.91% (When agent says fraud, how often is it right?)
+Recall:    72.50% (Out of all actual frauds, how many did the agent catch?)
+F1 Score:  69.05%
+
+Confusion Matrix:
+True Negatives (Correctly identified as Safe):  550
+False Positives (Falsely flagged as Fraud):     15
+False Negatives (Missed Frauds):                11
+True Positives (Correctly identified Fraud):    29
+========================================
+```
 
 **Decision:** **KEPT.** The LLM agent acts as a powerful complement to the Random Forest model. While the Random Forest provides a fast, mathematical probability score, the LLM agent provides deep reasoning and context synthesis that can act as a "second opinion" or an automated Level 1 triage filter before cases hit the human reviewer queue.

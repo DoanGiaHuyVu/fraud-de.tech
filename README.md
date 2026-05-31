@@ -170,7 +170,18 @@ pytest test_detector.py test_feedback.py -v
 
 3. **On-Premise LLM Deployment:** The "Ask AI" feature currently calls an external API. In a PCI-DSS / SOC2 compliant environment, we'd deploy a quantized Llama 3 8B inside the secure VPC so zero cardholder PII ever leaves the network perimeter.
 
-4. **Autonomous AI Agent Pipeline (`fraud_detection_agent/`):** A background worker powered by Google's Gemma 2.0 LLM that investigates transactions autonomously, achieving 95.7% accuracy and 72.5% recall without human intervention.
+4. **Autonomous AI Agent Pipeline (`fraud_detection_agent/`):** A background worker powered by Google's Gemma 2.0 LLM that investigates transactions autonomously without human intervention.
+```text
+========================================
+🤖 AGENT ACCURACY REPORT 🤖
+========================================
+Total Transactions Evaluated: 605
+Accuracy:  95.70%
+Precision: 65.91%
+Recall:    72.50%
+F1 Score:  69.05%
+========================================
+```
 - **FastAPI Backend**: Provides REST endpoints for data ingestion and real-time streaming LLM explanations.
 - **Vanilla Frontend**: A pure HTML/CSS/JS dashboard focused on speed, keyboard shortcuts, and minimal dependencies.
 
