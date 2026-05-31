@@ -110,7 +110,7 @@ function renderCurrentTx() {
                 });
                 const data = await res.json();
                 
-                const aiText = `[Sentinel AI Analysis]\n\n` + data.analysis;
+                const aiText = `[fraud-de.tech AI Analysis]\n\n` + data.analysis;
                 streamGemmaText(aiText, newBtn);
             } catch (e) {
                 streamGemmaText("[Error] Failed to connect to API.", newBtn);

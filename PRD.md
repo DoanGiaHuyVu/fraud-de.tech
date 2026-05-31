@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD): Sentinel
+# Product Requirements Document (PRD): fraud-de.tech
 
 **Version:** 1.0 | **Event:** Valsoft MPC Hacks 24-Hour Challenge
 

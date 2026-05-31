@@ -1,4 +1,4 @@
-# Implementation Plan: Sentinel
+# Implementation Plan: fraud-de.tech
 
 **Version:** 1.0 | **Event:** Valsoft MPC Hacks 24-Hour Challenge
 
@@ -6,7 +6,7 @@
 
 ## 1. Architecture Overview
 
-Sentinel is a two-process application: a **Python FastAPI backend** (data engine + REST API) and a **Vanilla HTML/CSS/JS frontend** (review dashboard). They communicate over HTTP on `localhost:8000`.
+fraud-de.tech is a two-process application: a **Python FastAPI backend** (data engine + REST API) and a **Vanilla HTML/CSS/JS frontend** (review dashboard). They communicate over HTTP on `localhost:8000`.
 
 ```
 transactions.csv
@@ -51,7 +51,7 @@ transactions.csv
 | **Charts** | Chart.js | Lightweight, no bundler required |
 | **Entity map** | Vis.js | Best-in-class for interactive node-edge graphs in pure browser |
 | **Geo map** | Leaflet.js + CartoDB dark tiles | Dark tile layer matches the dashboard aesthetic; OpenStreetMap-compatible; offline-safe |
-| **AI narrative** | External LLM API | Streaming text generation for the "Ask AI" button; output prefixed as `[Sentinel AI Analysis]` |
+| **AI narrative** | External LLM API | Streaming text generation for the "Ask AI" button; output prefixed as `[fraud-de.tech AI Analysis]` |
 
 **Explicitly avoided:**
 - React / Next.js — adds build complexity with no benefit at this scale

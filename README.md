@@ -1,8 +1,8 @@
-# Sentinel: Fraud Hunter
+# fraud-de.tech: Fraud Hunter
 
 **Valsoft MPC Hacks 24-Hour Code Challenge**
 
-Sentinel is an enterprise fraud triage dashboard for Trust & Safety analysts. It ingests one month of credit card transaction data, surfaces high-risk cases using a multi-phase detection pipeline, and presents them in a keyboard-driven review queue. An analyst can Approve, Dismiss, or Escalate each case in seconds — with full context, no tab-switching required.
+fraud-de.tech is an enterprise fraud triage dashboard for Trust & Safety analysts. It ingests one month of credit card transaction data, surfaces high-risk cases using a multi-phase detection pipeline, and presents them in a keyboard-driven review queue. An analyst can Approve, Dismiss, or Escalate each case in seconds — with full context, no tab-switching required.
 
 ---
 
