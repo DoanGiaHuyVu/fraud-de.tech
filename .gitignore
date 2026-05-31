@@ -12,3 +12,19 @@ wheels/
 # Project specific
 analyze.ipynb
 fraud_detection_agent/
+
+# Secrets
+.env
+
+# IDEs
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and outputs
+audit_log.json
