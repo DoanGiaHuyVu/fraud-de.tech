@@ -8,16 +8,19 @@ dependencies = [
     "fastapi>=0.110.0",
     "uvicorn[standard]>=0.29.0",
     "httpx>=0.27.0",
-    "matplotlib>=3.10.9",
-    "networkx>=3.6.1",
     "pandas>=3.0.3",
-    "scikit-learn>=1.8.0",
-    "seaborn>=0.13.0",
-    "xgboost>=2.1.0",
+    "python-dotenv",
     "google-genai>=2.7.0",
 ]
 
 [project.optional-dependencies]
+ds = [
+    "matplotlib>=3.10.9",
+    "networkx>=3.6.1",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.0",
+    "xgboost>=2.1.0",
+]
 dev = [
     "pytest>=8.0.0",
     "httpx>=0.27.0",

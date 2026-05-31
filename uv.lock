@@ -1597,19 +1597,22 @@ dependencies = [
     { name = "fastapi" },
     { name = "google-genai" },
     { name = "httpx" },
-    { name = "matplotlib" },
-    { name = "networkx" },
     { name = "pandas" },
-    { name = "scikit-learn" },
-    { name = "seaborn" },
+    { name = "python-dotenv" },
     { name = "uvicorn", extra = ["standard"] },
-    { name = "xgboost" },
 ]
 
 [package.optional-dependencies]
 dev = [
     { name = "httpx" },
     { name = "pytest" },
+]
+ds = [
+    { name = "matplotlib" },
+    { name = "networkx" },
+    { name = "scikit-learn" },
+    { name = "seaborn" },
+    { name = "xgboost" },
 ]
 
 [package.metadata]
@@ -1618,16 +1621,17 @@ requires-dist = [
     { name = "google-genai", specifier = ">=2.7.0" },
     { name = "httpx", specifier = ">=0.27.0" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27.0" },
-    { name = "matplotlib", specifier = ">=3.10.9" },
-    { name = "networkx", specifier = ">=3.6.1" },
+    { name = "matplotlib", marker = "extra == 'ds'", specifier = ">=3.10.9" },
+    { name = "networkx", marker = "extra == 'ds'", specifier = ">=3.6.1" },
     { name = "pandas", specifier = ">=3.0.3" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0.0" },
-    { name = "scikit-learn", specifier = ">=1.8.0" },
-    { name = "seaborn", specifier = ">=0.13.0" },
+    { name = "python-dotenv" },
+    { name = "scikit-learn", marker = "extra == 'ds'", specifier = ">=1.8.0" },
+    { name = "seaborn", marker = "extra == 'ds'", specifier = ">=0.13.0" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.29.0" },
-    { name = "xgboost", specifier = ">=2.1.0" },
+    { name = "xgboost", marker = "extra == 'ds'", specifier = ">=2.1.0" },
 ]
-provides-extras = ["dev"]
+provides-extras = ["ds", "dev"]
 
 [[package]]
 name = "watchfiles"
